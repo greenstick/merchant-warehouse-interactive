@@ -9,16 +9,383 @@
 <link href="css/interactive.css" rel="stylesheet" type="text/css">
 <!--Scripts-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<!-- 
 <script src="js/backgrounds.js"></script>
 <script src="js/html5.js"></script>
 <script src="js/kinetics.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/side-nav.js"></script>
+-->
 <script src="js/interactive.js"></script>
 </head>
 <body>
-	<div id="interactiveWrapper">
-
+	<div class="interactiveWrapper">
+		<div class="interactive">
+			<div class="scroller">
+				<div class="slide s1">
+					<div class="title">
+						<div class="span1">THE BASICS OF</div><br>
+						<div class="span2">PAYMENT PROCESSING</div>
+					</div>
+					<div class="arrow"></div>
+					<div class="leadText">
+						As a merchant, you've probably wondered what<br>
+						happens from the time you accept your customer's<br>
+						credit card to the time you receive payment.<br>
+						Three main processes ensure successful sales.
+					</div>
+				</div>
+				<div class="slide s2">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="c1">
+							<div class="leadText .toAuthorization">
+								Authorization
+							</div>
+							<div class="bodyText">
+								Confirming whether your<br>
+								customer's credit card is valid<br>
+								and if it has sufficient credit<br>
+								to purchase goods or services.
+							</div>
+						</div>
+						<div class="c2">
+							<div class="leadText toSettlement">
+								Settlement
+							</div>
+							<div class="bodyText">
+								Managing electronic<br>
+								payment transactions<br>
+								so they can clear and<br>
+								be funded.
+							</div>
+						</div>
+						<div class="c3">
+							<div class="leadText toFunding">
+								Funding
+							</div>
+							<div class="bodyText">
+								The Processor deposits money<br>
+								into your bank account to<br>
+								compensate you for<br>
+								transactions processed.
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="tillStatic"></div>
+					</div>
+				</div>
+				<div class="slide s3">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="s3c1 leadText">
+							Without authorization you won't be able to accept your<br>
+							customer's credit card for payment&mdash;and that could mean lost<br>
+							sales. You can obtain authorizations through a <span class="blueText">point&ndash;of&ndash;sale<br>
+							terminal</span>, virtual terminal, smartphone swiper, <span class="blueText">e&ndash;commerce</span><br>
+							website, or <span class="blueText">over the phone</span>.
+						</div>
+					</div>
+					<div class="footer">
+						<div class="tillStatic"></div>
+					</div>
+				</div>
+				<div class="slide s4">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="authpath"></div>
+						<div class="stepsText">
+							<div class="s4c1 leadText">
+								Authorization follows these steps. Generally, this<br>
+								entire process occurs <span class="boldText">within a matter of seconds:</span>
+							</div>
+							<div class="numberText no1 blueText">1.</div>
+							<div class="s4c2 bodyText">
+								Depending on how you run the card, this information is transmitted to a<br>
+								Processor (for instance, in a card-present environment, you swipe the card<br>
+								and enter the dollar amount, then send this informationto the Processor).
+							</div>
+							<div class="numberText no2 blueText">2.</div>
+							<div class="s4c3 bodyText">
+								The Processor forwards your request to the card payment brand, such as<br>
+								Visa&reg; or MasterCard&reg;.
+							</div>
+							<div class="numberText no3 blueText">3.</div>
+							<div class="s4c4 bodyText">
+								From there, the payment brand sends you your request to the card issuer<br>
+								(the bank that issued the card to the customer).
+							</div>
+							<div class="numberText no4 blueText">4.</div>
+							<div class="s4c5 bodyText">
+								The issuer approves or declines the transaction and and sends this response<br>
+								to the payment brand.
+							</div>
+							<div class="numberText no5 blueText">5.</div>
+							<div class="s4c6 bodyText">
+								The payment brand sends the response to the Processor.
+							</div>
+							<div class="numberText no6 blueText">6.</div>
+							<div class="s4c7 bodyText">
+								The Processor forwards the response to you (either via your point-of-sale<br>
+								device, e-commerce website, over the phone, etc.), so you can complete the<br>
+								transaction.
+							</div>
+							<div class="numberText no7 blueText">7.</div>
+							<div class="s4c8 bodyText">
+								The card will be <span class="greenbgText"> approved,</span> <span class="redbgText">declined,</span> or <span class="yellowbgText"> referred</span> for purchase. 
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="tillStatic"></div>
+					</div>
+				</div>
+				<div class="slide s5">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="leadText">
+							<div class="s5l1">
+								An <span class="greenText">approval</span> means that the dollar amount you specified will be<br>
+								reserved from the cardholder's available credit limit for future<br>
+								settlement.
+							</div>
+							<div class="s5l2">
+								A <span class="redText">decline</span> means that the customer's card<br>
+								cannot be used to complete the purchase.
+							</div>
+							<div class="s5l3">
+								A <span class="yellowText">referral</span> is a request for additional information<br>
+								(either from the merchant or the cardholder) before an authorization can be issued.
+							</div>
+						</div>
+						<div class="bodyText">
+							<div class="s5b2l">
+								As a merchant, the most important part<br>
+								of payment processing is whether or not<br>
+								your customer is able to use his or her card.<br>
+								<span class="blueText">
+								Be aware that you may receive a declined<br>
+								response for a number of reasons:
+								</span>
+							</div>
+							<div class="s5b2r">
+								<div class="s5b2i1"></div>
+								<div class="s5b2it1">
+									has spent more<br>
+									than his or her<br>
+									credit limit
+								</div>
+								<div class="s5b2it2">
+									or...a card is<br>
+									lost or stolen.
+								</div>
+								<div class="s5b2i2"></div>
+							</div>
+							<div class="s5b3">
+								An issuer may send a referral response as a security measure. If a referral is received,<br>
+								the Processor will contact the issuer directly and request authorization on your behalf.<br>
+								The issuer may request to speak with you or your customer/cardholder over the phone to<br>
+								confirm the legitimacy of the transaction before the issuing the authorization.<span class="blueText">A typical example<br>
+								of when this occurs is when the cardholder:</span>
+								<div class="s5b3i1"></div>
+								<div class="s5b3it1">
+									Is trying to make<br>
+									a purchase in a<br>
+									foreign country
+								</div>
+								<div class="s5b3i2"></div>
+								<div class="s5b3it2">
+									Is using his or her<br>
+									card more than<br>
+									usual in a short<br>
+									period of time
+								</div>
+								<div class="s5b3i3"></div>
+								<div class="s5b3it3">
+									or...has reached<br>
+									the credit limit.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="tillDisplay"></div>
+						<div class="tillStatus"></div>
+						<div class="tillHand"></div>
+						<div class="tillOuter"></div>
+					</div>
+				</div>
+				<div class="slide s6">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="leadText">
+							The process of managing electronic payment<br>
+							transactions so they can clear and be funded.
+						</div>
+						<div class="bodyText">
+							<span class="blueText">You've made the sale!</span> Depending on your business, your customer has either left your store,<br>
+							logged off your website, or hung up the phone, considering the sale complete. For you, however,<br>
+							the transaction is still in process, since it must now be settled. To make this happen, the<br>
+							approved card transaction must be presented to the Processor. The Processor then submits<br>
+							those approved transactions to the payment brands for clearing through <span class="blueText">interchange.</span><br>
+							You may hear these transactions referred to as 'deposit' transactions.<br><br>
+							Other costs to the acquirer include:
+							<div class="s6i1"></div>
+							<div class="s6it1">
+								<span class="leadText blueText">PROCESSING FEES:</span><br>
+								paid to the processor<br>
+								for running the<br>
+								transations and<br>
+								settling funds
+							</div>
+							<div class="s6it2">
+								<span class="leadText blueText">ASSESSMENTS AND<br>ASSOCIATION FEES:</span><br>
+								paid to Visa&reg;,<br>
+								MasterCard&reg;<br>
+								&amp; Discover&reg;
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="tillInner"></div>
+						<div class="tillHand"></div>
+						<div class="tillOuter"></div>
+					</div>
+				</div>
+				<div class="slide s7">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="leadText">
+							Interchange fees are fees that a merchant acquirers or<br>
+							merchant services provider pays to card-issuing banks.
+						</div>
+						<div class="bodyText">
+							<div class="s7i1"></div>
+							<div class="s7t1">
+								The rates for each interchange<br>
+								category are as complex as each<br>
+								credit card, and each transaction<br>
+								type has a specific cost that creates<br>
+								a grouping of over 700 rates.
+							</div>
+							<div class="s7t2">
+								The interchange category under which any single transaction falls will depend on various factors:
+							</div>
+							<div class="s7i2"></div>
+							<div class="s7t3">
+								The processing<br>
+								environment of<br>
+								a business<br>
+							</div>
+							<div class="s7t4">
+								The merchant's card<br>
+								acceptance method
+							</div>
+							<div class="s7t5">
+								Security information<br>
+								sent along with<br>
+								transaction
+							</div>
+							<div class="s7t6">
+								The card brand<br>
+								and type acceptance
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="tillInner"></div>
+					</div>
+				</div>
+				<div class="slide s8">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="leadText">
+							This is how settlement works:
+						</div>
+						<div class="bodyText">
+							<div class="settTrack">
+								<div class="settPath"></div>
+								<div class="settNode"></div>
+							</div>
+							<div class="numberText no1 blueText">1.</div>
+							<div class="s8c1">
+								Typically your terminal or point of sale device automatically<br>
+								triggers, or "batches" a settlement, unless further steps are<br>
+								required (e.g. tip adjustment in a restaurant).
+							</div>
+							<div class="numberText no2 blueText">2.</div>
+							<div class="s8c2">
+								The Processor forwards your settlement request to the appropriate<br>
+								credit card payment bran for confirmation with the cardholder's<br>
+								issuing bank.
+							</div>
+							<div class="numberText no3 blueText">3.</div>
+							<div class="s8c3"><br>
+								The Payment brand receives the settlement request and does two things:<br>
+								<span class="blueText">A.</span> Issues a credit to the Processor to reimburse you for the amount of the<br>
+								settled transaction. The issuer then pays the Processor for the transaction.<br>
+								<span class="blueText">B.</span> Issues a debit to the issuer to charge for the settled<br>
+								transaction. 
+							</div>
+							<div class="numberText no4 blueText">4.</div>
+							<div class="s8c4">
+								The issuer then posts the transation to the customer/cardholder's<br>
+								account. At the end of the billing period, the issuer sends the<br>
+								customer/cardholder his or her monthly statement.
+							</div>
+							<div class="numberText no5 blueText">5.</div>
+							<div class="s8c5">
+								The cardholder receives his or her credit card statement and pays<br>
+								the bill (to the card issuer).
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="billPen"></div>
+					</div>
+				</div>
+				<div class="slide s9">
+					<div class="nav"></div>
+					<div class="head"></div>
+					<div class="copy">
+						<div class="leadText">
+							The Processor deposits money into your bank account<br>
+							to compensate you for transactions processed.
+						</div>
+						<div class="bodyText">
+							The funding process is really an extension<br>
+							of settlement, and somtimes the terms<br>
+							"settlement," "batching," and "funding" are<br>
+							used interchangeably regarding this process.<br>
+							Funding happens when the payment brands,<br>
+							such as Visa&reg; or MasterCard&reg;, reimburse<br>
+							the Processor for your customer transaction,<br>
+							allowing us to send these funds to you.<br>
+							Generally, you receive your funds within<br>
+							one to two business days.<br><br>
+							<span class="lightgreyText">
+							*Note that funding does not occur<br>
+							on weekends or on certain holidays,<br>
+							particularly federal banking holidays.
+						</div>
+					</div>
+					<div class="footer">
+						<div class="pig"></div>
+					</div>
+				</div>
+				<div class="s10"></div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

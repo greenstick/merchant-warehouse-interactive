@@ -1,9 +1,1053 @@
-/************************************
- *									*
- *	Merchant Warehouse				*
- *  interactive.css					*
- *	Column Five Media, Inc.			*
- *	Authored by Benjamin Cordier	*
- *									*
- ************************************/
+/****************************
+*							*
+*	Merchant Warehouse		*
+*	interactive.css			*
+*	Column Five Media, Inc.	*
+*							*
+****************************/
 
+/******************************************************
+ * Global Styles
+ **/
+
+.interactiveWrapper
+{
+	position: relative;
+	width: 630px;
+	margin: 0 auto;
+}
+.interactive
+{
+	width: 630px;
+	height: 550px;
+	overflow: hidden;
+	color: #404040;
+}
+.scroller
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 4950px;
+}
+.slide
+{
+	position: relative;
+	width: 630px;
+	height: 550px;
+/*	border: 1px dashed #2F2F2F;*/
+}
+.bg
+{
+	background-color: #FFFFFF;
+}
+.nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/nav_sprite.png");
+	width: 630px;
+	height: 60px;
+}
+.navAuth:hover
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/nav_sprite.png");
+}
+.navSett:hover
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/nav_sprite.png");
+}
+.navFund:hover
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/nav_sprite.png") 0px 0px;
+}
+.head
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	height: 50px;
+	width: 630px;
+}
+.copy
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 630px;
+	height: 135px;	
+}
+.footer
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 255px;
+}
+.title
+{
+	font-family: 'Roboto Slab', serif;
+	color: #FFFFFF;
+}
+.numberText
+{
+	font-family: 'Roboto Slab', serif;
+	font-size: 2.5em;
+}
+.leadText
+{
+	font-family: 'Scada', sans-serif;
+	font-weight: normal;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+.bodyText
+{
+	font-family: 'Scada', sans-serif;
+	font-weight: normal;
+	font-size: 0.85em;
+}
+.boldText
+{
+	font-weight: bold;
+}
+.blueText
+{
+	color: #1D92ED;
+}
+.greenText
+{
+	color: #41AD49;
+}
+.redText
+{
+	color: #D2235A;
+}
+.yellowText
+{
+	color: #EFB42A;
+}
+.lightgreyText
+{
+	color: #787878;
+}
+.greenbgText
+{
+	background-color: #41AD49;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.redbgText
+{
+	background-color: #D2235A;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.yellowbgText
+{
+	background-color: #EFB42A;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.tillDisplay
+{
+	background: url("../img/swipe_display.png") 0px 0px;
+	width: 630px;
+	height: 255px;
+}
+.tillInner
+{
+	background: url("../img/swipe_inner.png") 0px 0px;
+	width: 630px;
+	height: 58px;
+}
+.tillHand
+{
+	background: url("../img/swipe_hand.png") 0px 0px;
+	width: 560px;
+	height: 204px;
+}
+.tillOuter
+{
+	background: url("../img/swipe_outer.png") 0px 0px;
+	width: 630px;
+	height: 47px;
+}
+.tillStatus
+{
+	background: url("../img/swipe_status.png") 0px 0px;
+	width: 208px;
+	height: 40px;
+}
+.billPen
+{
+	background: url("../img/settlement_foot.png") 0px 0px;
+	width: 630px;
+	height: 167px;
+}
+.pig
+{
+	background: url("../img/pig.png") 0px 0px;
+	width: 630px;
+	height: 363px;
+}
+
+/******************************************************
+ * Slide 1
+ **/
+
+.s1
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url("../img/title_background.png") 0px 0px;
+}
+.s1 .title
+{
+	position: relative;
+	width: 630px;
+	height: 132px;
+}
+.s1 .title .span1
+{
+	position: relative;
+	padding-top: 32px;
+	font-size: 2.0em;
+	text-align: center;
+}
+.s1 .title .span2
+{
+	font-size: 3.0em;
+	text-align: center;
+}
+.s1 .leadText
+{
+	position: relative;
+	left: 0px;
+	top: 226px;
+	height: 142px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.s1 .arrow
+{
+	position: relative;
+	left: 40px;
+	top: 340px;
+	z-index: 9999;
+	background: url("../img/white_scroll_arrow.png") 0px 0px;
+	width: 31px;
+	height: 50px;
+	opacity: 0;
+}
+
+/******************************************************
+ * Slide 2
+ **/
+
+.s2
+{
+	position: absolute;
+	left: 0px;
+	top: 550px;
+}
+.s2 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px 0px;
+}
+.s2 .head
+{
+	background: url("../img/intro_icons.png") 0px 0px;
+	width: 630px; 
+	height: 100px;
+}
+.s2 .copy .c1
+{
+	position: relative;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 16px;
+}
+.s2 .copy .c2
+{
+	position: relative;
+	display: inline-block;
+	padding-left: 14px;
+	padding-right: 16px;
+}
+.s2 .copy .c3
+{
+	position: relative;
+	display: inline-block;
+	padding-left: 34px;
+	padding-right: 28px;
+}
+.s2 .copy .c1 .leadText
+{
+	color: #1D92ED;
+	cursor: pointer;
+}
+.s2 .copy .c2 .leadText
+{
+	color: #1D92ED;
+	cursor: pointer;
+}
+.s2 .copy .c3 .leadText
+{
+	color: #1D92ED;
+	cursor: pointer;
+}
+.s2 .footer .tillStatic
+{
+	background: url("../img/swipe_static_solid.png") 0px 0px;
+	width: 630px;
+	height: 255px;
+}
+
+/******************************************************
+ * Slide 3
+ **/
+
+.s3
+{
+	position: absolute;
+	left: 0px;
+	top: 1100px;
+}
+.s3 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s3 .head
+{
+	background: url("../img/section_title.png") 0px 0px;	
+	width: 300px;
+	height: 50px;
+}
+.s3 .copy
+{
+	width: 630px;
+	height: 184px;
+}
+.s3 .copy .leadText
+{
+	padding-left: 20px;
+}
+.s3 .footer .tillStatic
+{
+	background: url("../img/swipe_static_solid.png") 0px 0px;
+	width: 630px;
+	height: 255px;
+}
+
+/******************************************************
+ * Slide 4
+ **/
+
+.s4
+{
+	position: absolute;
+	left: 0px;
+	top: 1650px;
+}
+.s4 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s4 .head
+{
+	background: url("../img/section_title.png") 0px 0px;	
+	width: 300px;
+	height: 50px;
+}
+.s4 .copy
+{
+	width: 630px;
+	height: 184px;
+}
+.s4 .copy .authpath
+{
+	position: relative;
+	left: 0px;
+	top: 23px;
+	background: url("../img/auth_path.png") 0px 0px;
+	height: 168px;
+	width: 630px;
+	z-index: 5;
+}
+.s4 .copy .stepsText
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-left: 60px;
+	z-index: 10;
+}
+.s4 .copy .stepsText .no1
+{
+	position: relative;
+	left: -30px;
+	top: -92px;
+	display: none;
+}
+.s4 .copy .stepsText .no2
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+}
+.s4 .copy .stepsText .no3
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+}
+.s4 .copy .stepsText .no4
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+}
+.s4 .copy .stepsText .no5
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+}
+.s4 .copy .stepsText .no6
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+}
+.s4 .copy .stepsText .no7
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: none;
+}
+.s4 .copy .stepsText .bodyText
+{
+	padding-left: 20px;
+	z-index: 10;
+}
+.s4 .copy .stepsText .s4c1
+{
+	position: relative;
+	left: 0px;
+	top: -94px;
+	display: block;
+}
+.s4 .copy .stepsText .s4c2
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;
+}
+.s4 .copy .stepsText .s4c3
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;	
+}
+.s4 .copy .stepsText .s4c4
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;
+}
+.s4 .copy .stepsText .s4c5
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;
+}
+.s4 .copy .stepsText .s4c6
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;
+}
+.s4 .copy .stepsText .s4c7
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;
+}
+.s4 .copy .stepsText .s4c8 
+{
+	position: relative;
+	left: 0px;
+	top: -110px;
+	display: none;
+}
+.s4 .footer .tillStatic
+{
+	background: url("../img/swipe_static_trans.png") 0px 0px;
+	width: 630px;
+	height: 255px;
+}
+
+/******************************************************
+ * Slide 5
+ **/
+
+.s5
+{
+	position: absolute;
+	left: 0px;
+	top: 2200px;
+}
+.s5 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+	width: 630px;
+	height: 60px;
+}
+.s5 .head
+{
+	background: url("../img/section_title.png") 0px 0px;	
+	width: 300px;
+	height: 50px;
+}
+.s5 .copy
+{
+	height: 224px;
+}
+.s5 .copy .leadText
+{
+	padding-left: 20px;
+	height: 84px;
+}
+.s5 .copy .leadText .s5l1
+{
+	display: none
+}
+.s5 .copy .leadText .s5l2
+{
+	display: block;
+}
+.s5 .copy .leadText .s5l3
+{
+	display: none;
+}
+.s5 .copy .bodyText
+{
+	/*remove opacity*/
+	opacity: 1;
+	padding-left: 20px;
+	height: 140px;
+}
+.s5 .copy .bodyText .s5b2l
+{
+	display: inline-block;
+	width: 315px;
+}
+.s5 .copy .bodyText .s5b2r
+{
+	display: inline-block;
+	width: 315px;
+}
+.s5b2i1
+{
+	position: relative;
+	left: 296px;
+	top: -76px;
+	background: url("../img/auth_dec1.png") 0px 0px;
+	width: 202px;
+	height: 79px;
+}
+.s5b2it1
+{
+	position: relative;
+	left: 300px;
+	top: -72px;
+}
+.s5b2it2
+{
+	position: relative;
+	left: 416px;
+	top: -114px;
+}
+.s5b2i2
+{
+	position: relative;
+	left: 524px;
+	top: -224px;
+	background: url("../img/why.png") 0px 0px;
+	width: 86px;
+	height: 81px;
+}
+.s5b3
+{
+	display: none;
+}
+.s5 .footer
+{
+	position: relative;
+	left: 0px;
+	top: -40px;
+	z-index: -5;
+}
+.s5 .footer .tillDisplay
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+.s5 .footer .tillStatus
+{
+	position: relative;
+	left: 34px;
+	top: -230px;
+}
+.s5 .footer .tillHand
+{
+	position: relative;
+	left: 70px;
+	top: -262px;
+}
+.s5 .footer .tillOuter
+{
+	position: relative;
+	left: 0px;
+	top: -292px;
+}
+
+/******************************************************
+ * Slide 6
+ **/
+
+.s6
+{
+	position: absolute;
+	left: 0px;
+	top: 2750px;
+}
+.s6 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s6 .head
+{
+	background: url("../img/section_title.png") 0px -50px;	
+	width: 300px;
+	height: 50px;
+}
+.s6 .copy .leadText
+{
+	height: 80px;
+	padding-left: 20px;
+}
+.s6 .copy .bodyText
+{
+	width: 630px;
+	height: ;
+	padding-left: 20px;
+	line-height: 16px;
+}
+.s6 .leadText.blueText
+{
+	padding-left: 0px;
+	font-size: 1em;
+}
+.s6 .copy .bodyText .s6i1
+{
+	position: relative;
+	left: -20px;
+	top: 8px;
+	background: url("../img/sett_i1.png");
+	width: 363px;
+	height: 101px;
+	padding-left: 0px;
+	z-index: -5;
+}
+.s6 .copy .bodyText .s6it1
+{
+	position: relative;
+	left: 100px;
+	top: -88px;
+}
+.s6 .copy .bodyText .s6it2
+{
+	position: relative;
+	left: 346px;
+	top: -170px;
+}
+.s6 .footer
+{
+	padding-top: 246px;
+}
+.s6 .footer .tillInner
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+.s6 .footer .tillHand
+{
+	position: relative;
+	left: 360px;
+	top: -222px;
+}
+.s6 .footer .tillOuter
+{
+	position: relative;
+	left: 0px;
+	top: -252px;
+}
+
+/******************************************************
+ * Slide 7
+ **/
+
+.s7
+{
+	position: absolute;
+	left: 0px;
+	top: 3300px;
+}
+.s7 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s7 .head
+{
+	background: url("../img/section_title.png") 0px -50px;	
+	width: 300px;
+	height: 50px;
+}
+.s7 .copy
+{
+	position: relative;
+	height: 381px;
+}
+.s7 .copy .leadText
+{
+	padding-left: 20px;
+}
+.s7 .copy .bodyText
+{
+	padding-left: 20px;	
+}
+.s7 .copy .bodyText .s7i1
+{
+	position: relative;
+	left: -20px;
+	top: 16px;
+	background: url("../img/sett_i2.png") 0px 0px;
+	width: 371px;
+	height: 108px;
+	display: inline-block;
+}
+.s7 .copy .bodyText .s7t1
+{
+	position: relative;
+	left: 351px;
+	top: -84px;
+	width: 259px;
+	height: 108px;
+	line-height: 18px;
+}
+.s7 .copy .bodyText .s7t2
+{
+	position: relative;
+	top: -76px;
+}
+.s7 .copy .bodyText .s7i2
+{
+	position: relative;
+	left: -20px;
+	top: -64px;
+	background: url("../img/sett_i3.png") 0px 0px;
+	width: 630px;
+	height: 40px;
+}
+.s7 .copy .bodyText .s7t3
+{
+	position: relative;
+	left: 0px;
+	top: -42px;	
+}
+.s7 .copy .bodyText .s7t4
+{
+	position: relative;
+	left: 132px;
+	top: -84px;	
+}
+.s7 .copy .bodyText .s7t5
+{
+	position: relative;
+	left: 304px;
+	top: -112px;	
+}
+.s7 .copy .bodyText .s7t6
+{
+	position: relative;
+	left: 476px;
+	top: -154px;	
+}
+.s7 .footer
+{
+	position: relative;
+	left: 0px;
+	height: 58px;
+}
+
+/******************************************************
+ * Slide 8
+ **/
+
+.s8
+{
+	position: absolute;
+	left: 0px;
+	top: 3850px;
+}
+.s8 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s8 .head
+{
+	background: url("../img/section_title.png") 0px -50px;	
+	width: 300px;
+	height: 50px;
+}
+.s8 .copy
+{
+	position: relative;
+	height: 272px;
+}
+.s8 .copy .bodyText
+{
+	line-height: 18px;
+}
+.s8 .copy .bodyText .settTrack
+{
+	position: relative;
+	width: 630px;
+	height: 180px;
+}
+.s8 .copy .bodyText .settTrack .settPath
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/sett_i4.png") 0px 0px;
+	width: 630px;
+	height: 180px;
+	z-index: -5;
+}
+.s8 .copy .bodyText .settTrack .settNode
+{
+	position: relative;
+	left: 36px;
+	top: -180px;
+	background: url("../img/sett_i4.png")-36px -180px;
+	width: 80px;
+	height: 180px;
+	z-index: 5;
+}
+.s8 .copy .bodyText .no1
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: block;
+}
+.s8 .copy .bodyText .no2
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: none;
+}
+.s8 .copy .bodyText .no3
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: none;
+}
+.s8 .copy .bodyText .no4
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: none;
+}
+.s8 .copy .bodyText .no5
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c1
+{
+	position: relative;
+	left: 128px;
+	top: -12px;
+	width: 630px;
+	height: 180px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c2
+{
+	position: relative;
+	left: 128px;
+	top: -12px;
+	width: 630px;
+	height: 180px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c3
+{
+	position: relative;
+	left: 128px;
+	top: -30px;
+	width: 630px;
+	height: 180px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c4
+{
+	position: relative;
+	left: 128px;
+	top: -12px;
+	width: 630px;
+	height: 180px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c5
+{
+	position: relative;
+	left: 128px;
+	top: -12px;
+	width: 630px;
+	height: 180px;
+	display: block;
+}
+.s8 .footer
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	z-index: -5;
+}
+
+/******************************************************
+ * Slide 9
+ **/
+
+.s9
+{
+	position: absolute;
+	left: 0px;
+	top: 4400px;
+}
+.s9 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s9 .head
+{
+	background: url("../img/section_title.png") 0px -100px;	
+	width: 300px;
+	height: 50px;
+}
+.s9 .copy
+{
+	position: relative;
+	height: 381px;
+}
+.s9 .copy .leadText
+{
+	padding-left: 20px;
+	height: 80px;
+}
+.s9 .copy .bodyText
+{
+	padding-left: 20px;
+	line-height: 1.5em;
+}
+.s9 .footer
+{
+	position: relative;
+	left: 0px;
+	top: -304px;
+	height: 58px;
+	z-index: -5;
+}
+/******************************************************
+ * Slide return
+ **/
+
+ .s10
+ {
+ 	display: none;
+ }
