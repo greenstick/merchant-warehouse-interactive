@@ -20,7 +20,7 @@
 	var currentlyScrolling = false,
 		currentSlide = 1,
 		url = '.s1', 
-		time = 1200;
+		time = 1000;
 
 	$(window).load(function()
 	{
@@ -95,39 +95,19 @@
 			currentlyScrolling = true;
 			if (delta < 0)
 			{
-				if(currentSlide === 10)
-				{
-					$(url).removeClass('active');
-					lastScrollTop = $('.interactive').scrollTop();
-					currentSlide = 1;
-					url = '.s1';
-					currentlyScrolling = false;
-				}
-				else
-				{
-					time = 1200;
-					$(url).removeClass('active');
-					currentSlide = parseInt(currentSlide) + 1;
-					url = '.s' + currentSlide + '';
-					navigateSlides(url, time);
-				}
+				$(url).animate({opacity: 0}, 1000, 'easeInCirc');
+				$(url).removeClass('active');
+				currentSlide = parseInt(currentSlide) + 1;
+				url = '.s' + currentSlide + '';
+				navigateSlides(url, time);
 			}
 			else
 			{
-				if (currentSlide === 0)
-				{
-					$(url).removeClass('active');
-					lastScrollTop = $('.interactive').scrollTop();
-					currentlyScrolling = false;
-				}
-				else
-				{
-					time = 1200;
-					$(url).removeClass('active');
-					currentSlide = parseInt(currentSlide) - 1;
-					url = '.s' + currentSlide + '';
-					navigateSlides(url, time);
-				}
+				$(url).animate({opacity: 0}, 1000, 'easeInCirc');
+				$(url).removeClass('active');
+				currentSlide = parseInt(currentSlide) - 1;
+				url = '.s' + currentSlide + '';
+				navigateSlides(url, time);
 			}
 //Redirect to Start or End
 			if (currentSlide === 0)
@@ -152,7 +132,7 @@
 			// 		}
 			// 		function hideArrow()
 			// 		{
-			// 			setTimeout($('.arrow').fadeOut(), 1000)
+			// 			setTimeout($('.arrow').hide(), 1000)
 			// 			showArrow();
 			// 			clearInterval();
 			// 		}
@@ -169,65 +149,66 @@
 	{
 		if (url === '.s10')
 		{
-			time = 3000;
-			$('.interactive').scrollTo($('.s1'), time, 'easeInCirc');
+			$('.s9').animate({opacity: 0}, 1000, 'easeInCirc');
+			$('.s9').removeClass('active');
 			url = '.s1';
 			currentSlide = 1;
 			$(url).addClass('active');
-			setTimeout(doneScrolling, delay);
+			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
+			setTimeout(doneScrolling, time);
 		}
 		else if (url === '.s0')
 		{
-			time = 3000;
-			$('.interactive').scrollTo($('.s9'), time, 'easeInCirc');
+			$('.s1').animate({opacity: 0}, 1000, 'easeInCirc');
+			$('.s1').removeClass('active');
 			url = '.s9';
 			currentSlide = 9;
 			$(url).addClass('active');
-			setTimeout(doneScrolling, delay);
+			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
+			setTimeout(doneScrolling, time);
 		}
 		else
 		{
-			$('.interactive').scrollTo($(url), time, 'easeInCirc');
 			$(url).addClass('active');
-			setTimeout(doneScrolling, delay);
+			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
+			setTimeout(doneScrolling, time);
 		}
 
 		$('.toAuthorization').on('click', function()
 		{
-			time = 1600;
+			$(url).animate({opacity: 0}, 1000, 'easeInCirc');
 			$(url).removeClass('active');
-			$('.interactive').scrollTo($('.s3'), time, 'easeInCirc');
 			url = '.s3';
 			currentSlide = 3;
 			$(url).addClass('active');
-			setTimeout(doneScrolling, delay);
+			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
+			setTimeout(doneScrolling, time);
 		});
 		$('.toSettlement').on('click', function()
 		{
-			time = 2400;
+			$(url).animate({opacity: 0}, 1000, 'easeInCirc');
 			$(url).removeClass('active');
-			$('.interactive').scrollTo($('.s6'), time, 'easeInCirc');
 			url = '.s6';
 			currentSlide = 6;
 			$(url).addClass('active');
-			setTimeout(doneScrolling, delay);
+			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
+			setTimeout(doneScrolling, time);
 		});
 		$('.toFunding').on('click', function()
 		{
-			time = 3000;
+			$(url).animate({opacity: 0}, 1000, 'easeInCirc');
 			$(url).removeClass('active');
-			$('.interactive').scrollTo($('.s9'), time, 'easeInCirc');
 			url = '.s9';
 			currentSlide = 9;
 			$(url).addClass('active');
-			setTimeout(doneScrolling, delay);
+			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
+			setTimeout(doneScrolling, time);
 		})
 	}
 
 	function doneScrolling() {
-		lastScrollTop = $(window).scrollTop();
 		currentlyScrolling = false;
-		clearTimeout(doneScrolling);
+		clearTimeout(doneScrolling, time);
 	}
 })(jQuery);
 
@@ -235,7 +216,7 @@
 	//A
 				// $(thisSlide).find(".copy").each(function(e, i)
 				// {
-				// 	$(element).fadeOut();
+				// 	$(element).hide();
 				// })
 				// $(thisSlide).find(".copy").each(function(e, i)
 				// {
@@ -244,7 +225,7 @@
 	//B
 				// $(thisSlide).find(".copy").each(function(e, i)
 				// {
-				// 	$(element).fadeOut();
+				// 	$(element).hide();
 				// })
 				// $(thisSlide).find(".copy").each(function(e, i)
 				// {

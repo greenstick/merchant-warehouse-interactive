@@ -202,7 +202,7 @@
 	background: url("../img/pig.png") 0px 0px;
 	width: 630px;
 	height: 363px;
-}
+} 
 
 /******************************************************
  * Slide 1
@@ -214,6 +214,12 @@
 	left: 0px;
 	top: 0px;
 	background: url("../img/title_background.png") 0px 0px;
+	display: none;
+}
+.s1.active
+{
+	opacity: 1;
+	display: block;
 }
 .s1 .title
 {
@@ -262,7 +268,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 550px;
+	top: 0px;
+	display: none;
+}
+.s2.active
+{
+	opacity: 0;
+	display: block;
 }
 .s2 .nav
 {
@@ -330,7 +342,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 1100px;
+	top: 0px;
+	display: none;
+}
+.s3.active
+{
+	opacity: 0;
+	display: block;
 }
 .s3 .nav
 {
@@ -371,7 +389,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 1650px;
+	top: 0px;
+	display: none;
+}
+.s4.active
+{
+	opacity: 0;
+	display: block;
 }
 .s4 .nav
 {
@@ -536,7 +560,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 2200px;
+	top: 0px;
+	display: none;
+}
+.s5.active
+{
+	opacity: 0;
+	display: block;
 }
 .s5 .nav
 {
@@ -665,7 +695,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 2750px;
+	top: 0px;
+	display: none;
+}
+.s6.active
+{
+	opacity: 0;
+	display: block;
 }
 .s6 .nav
 {
@@ -753,7 +789,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 3300px;
+	top: 0px;
+	display: none;
+}
+.s7.active
+{
+	opacity: 0;
+	display: block;
 }
 .s7 .nav
 {
@@ -855,7 +897,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 3850px;
+	top: 0px;
+	display: none;
+}
+.s8.active
+{
+	opacity: 0;
+	display: block;
 }
 .s8 .nav
 {
@@ -1003,7 +1051,13 @@
 {
 	position: absolute;
 	left: 0px;
-	top: 4400px;
+	top: 0px;
+	display: none;
+}
+.s9.active
+{
+	opacity: 0;
+	display: block;
 }
 .s9 .nav
 {
@@ -1043,11 +1097,3 @@
 	height: 58px;
 	z-index: -5;
 }
-/******************************************************
- * Slide return
- **/
-
- .s10
- {
- 	display: none;
- }
