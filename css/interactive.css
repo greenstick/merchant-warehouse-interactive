@@ -270,6 +270,7 @@
 	left: 0px;
 	top: 0px;
 	display: none;
+	background-color: #FFFFFF
 }
 .s2.active
 {
@@ -726,7 +727,6 @@
 .s6 .copy .bodyText
 {
 	width: 630px;
-	height: ;
 	padding-left: 20px;
 	line-height: 16px;
 }

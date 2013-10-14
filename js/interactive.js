@@ -6,21 +6,14 @@
 *							*
 ****************************/
 
- /**
-  * parallax.js API info:
-  *
-  * .start()   anim-pause
-  *	.focus()   anim-detached
-  * .to()      anim-speed
-  * .end()     data-nav
-  * onBlur     onFocus
-  **/
 (function($)
 {
 	var currentlyScrolling = false,
 		currentSlide = 1,
-		url = '.s1', 
-		time = 1000;
+		url = '.s1',
+		time = 1000,
+		slidesArray = [],
+		subArray = [4, 5, 8];
 
 	$(window).load(function()
 	{
@@ -95,30 +88,166 @@
 			currentlyScrolling = true;
 			if (delta < 0)
 			{
-				$(url).animate({opacity: 0}, 1000, 'easeInCirc');
-				$(url).removeClass('active');
+				$(url).animate({opacity: 0}, 1000, 'linear');
 				currentSlide = parseInt(currentSlide) + 1;
 				url = '.s' + currentSlide + '';
 				navigateSlides(url, time);
+				checkPosition();
 			}
 			else
 			{
-				$(url).animate({opacity: 0}, 1000, 'easeInCirc');
-				$(url).removeClass('active');
+				$(url).animate({opacity: 0}, 1000, 'linear');
 				currentSlide = parseInt(currentSlide) - 1;
 				url = '.s' + currentSlide + '';
 				navigateSlides(url, time);
+				checkPosition();
 			}
-//Redirect to Start or End
-			if (currentSlide === 0)
+//C
+		}
+	}
+//Scroll initiated navigation
+	function navigateSlides(loc, delay)
+	{
+		if (url === '.s10')
+		{
+			url = '.s1';
+			currentSlide = 1;
+			$(url).addClass('active')
+			$(url).animate({opacity: 1}, 1000, 'linear')
+					.delay(600)
+					.queue(function(next)
+						{
+							checkActive();
+							next();
+						});
+			setTimeout(doneScrolling, time);
+		}
+		else if (url === '.s0')
+		{
+			url = '.s9';
+			currentSlide = 9;
+			$(url).addClass('active');
+			$(url).animate({opacity: 1}, 1000, 'linear')
+					.delay(600)
+					.queue(function(next)
+						{
+							checkActive();
+							next();
+						});
+			setTimeout(doneScrolling, time);
+		}
+		else
+		{
+			$(url).addClass('active');
+			$(url).animate({opacity: 1}, 1000, 'linear');$(url)
+					.delay(600)
+					.queue(function(next)
+						{
+							checkActive();
+							next();
+						});
+			setTimeout(doneScrolling, time);
+		}
+//Direct click-to navigation (located on slide 2)
+		$('.toAuthorization').on('click', function()
+		{
+			$('.s2').animate({opacity: 0}, 1000, 'linear');
+			url = '.s3';
+			currentSlide = 3;
+			$(url).addClass('active');
+			$(url).animate({opacity: 1}, 1000, 'linear')
+					.delay(600)
+					.queue(function(next)
+						{
+							checkActive();
+							next();
+						});
+			setTimeout(doneScrolling, time);
+		});
+		$('.toSettlement').on('click', function()
+		{
+			$('.s2').animate({opacity: 0}, 1000, 'linear');
+			url = '.s6';
+			currentSlide = 6;
+			$(url).addClass('active');
+			$(url).animate({opacity: 1}, 1000, 'linear')
+					.delay(600)
+					.queue(function(next)
+						{
+							checkActive();
+							next();
+						});
+			setTimeout(doneScrolling, time);
+		});
+		$('.toFunding').on('click', function()
+		{
+			$('.s2').animate({opacity: 0}, 1000, 'linear');
+			url = '.s9';
+			currentSlide = 9;
+			$(url).addClass('active');
+			$(url).animate({opacity: 1}, 1000, 'linear')
+					.delay(600)
+					.queue(function(next)
+						{
+							checkActive();
+							next();
+						});
+			setTimeout(doneScrolling, time);
+		})
+	}
+//Is navigation scroll finished?
+	function doneScrolling()
+	{
+		currentlyScrolling = false;
+		clearTimeout(doneScrolling, time);
+	}
+//What slides are active?
+	function checkActive()
+	{
+		$('.active').each(function()
+				{
+					$(this).not(url).removeClass('active');
+				});
+	}
+//Has the user reached the end of the show?
+	function checkPosition()
+	{
+		if (currentSlide === 0){currentSlide = 9;}
+		else if (currentSlide === 10){currentSlide = 1;}
+		else currentSlide = currentSlide;
+	}
+	function getsubSlides()
+	{
+		for(var i = 0; i < subArray.length; i++)
+		{
+			if(currentSlide == subArray[i])
 			{
-				currentSlide = 9;
+				animationQueue = 'getAnim' + subArray[i] + '();'
 			}
-			else if (currentSlide === 10)
-			{
-				currentSlide = 1;
-			}
-			else currentSlide = currentSlide;
+		}
+	};
+})(jQuery);
+
+//Other blocks to be implemented
+	//A
+				// $(thisSlide).find(".copy").each(function(e, i)
+				// {
+				// 	$(element).hide();
+				// })
+				// $(thisSlide).find(".copy").each(function(e, i)
+				// {
+				// 	$(element).delay(600*i).fadeIn();
+				// })
+	//B
+				// $(thisSlide).find(".copy").each(function(e, i)
+				// {
+				// 	$(element).hide();
+				// })
+				// $(thisSlide).find(".copy").each(function(e, i)
+				// {
+				// 	$(element).delay(600*i).fadeIn();
+	//C
+				//Redirect to Start or End
 //Directs user to scroll down by showing/hiding arrow element
 			// if(url = ".s1")
 			// {
@@ -142,92 +271,4 @@
 			// {
 			// 	clearInterval();
 			// }
-		}
-	}
-
-	function navigateSlides(loc, delay)
-	{
-		if (url === '.s10')
-		{
-			$('.s9').animate({opacity: 0}, 1000, 'easeInCirc');
-			$('.s9').removeClass('active');
-			url = '.s1';
-			currentSlide = 1;
-			$(url).addClass('active');
-			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
-			setTimeout(doneScrolling, time);
-		}
-		else if (url === '.s0')
-		{
-			$('.s1').animate({opacity: 0}, 1000, 'easeInCirc');
-			$('.s1').removeClass('active');
-			url = '.s9';
-			currentSlide = 9;
-			$(url).addClass('active');
-			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
-			setTimeout(doneScrolling, time);
-		}
-		else
-		{
-			$(url).addClass('active');
-			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
-			setTimeout(doneScrolling, time);
-		}
-
-		$('.toAuthorization').on('click', function()
-		{
-			$(url).animate({opacity: 0}, 1000, 'easeInCirc');
-			$(url).removeClass('active');
-			url = '.s3';
-			currentSlide = 3;
-			$(url).addClass('active');
-			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
-			setTimeout(doneScrolling, time);
-		});
-		$('.toSettlement').on('click', function()
-		{
-			$(url).animate({opacity: 0}, 1000, 'easeInCirc');
-			$(url).removeClass('active');
-			url = '.s6';
-			currentSlide = 6;
-			$(url).addClass('active');
-			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
-			setTimeout(doneScrolling, time);
-		});
-		$('.toFunding').on('click', function()
-		{
-			$(url).animate({opacity: 0}, 1000, 'easeInCirc');
-			$(url).removeClass('active');
-			url = '.s9';
-			currentSlide = 9;
-			$(url).addClass('active');
-			$('.active').animate({opacity: 1}, 1000, 'easeInCirc');
-			setTimeout(doneScrolling, time);
-		})
-	}
-
-	function doneScrolling() {
-		currentlyScrolling = false;
-		clearTimeout(doneScrolling, time);
-	}
-})(jQuery);
-
-//Other blocks to be implemented
-	//A
-				// $(thisSlide).find(".copy").each(function(e, i)
-				// {
-				// 	$(element).hide();
-				// })
-				// $(thisSlide).find(".copy").each(function(e, i)
-				// {
-				// 	$(element).delay(1000*i).fadeIn();
-				// })
-	//B
-				// $(thisSlide).find(".copy").each(function(e, i)
-				// {
-				// 	$(element).hide();
-				// })
-				// $(thisSlide).find(".copy").each(function(e, i)
-				// {
-				// 	$(element).delay(1000*i).fadeIn();
 				// })
