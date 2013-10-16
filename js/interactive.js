@@ -134,8 +134,8 @@
 					$('.animating').animate({opacity: 0}, 600, 'linear');
 					$('.animating').removeClass('animating');
 					currentEle = parseInt(currentEle + 1);
-					animEle = url + 'c' + currentEle;
-					animNode = url + 'n' + currentEle;
+					animEle = url + 'c' + currentEle + '';
+					animNode = url + 'n' + currentEle + '';
 					$(animEle).addClass('animating');
 					$(animNode).addClass('animating');
 					$('.animating').animate({opacity: 1}, 600, 'linear')
@@ -154,8 +154,8 @@
 					$('.animating').animate({opacity: 0}, 600, 'linear');
 					currentEle = parseInt(currentEle -1);
 					$('.animating').removeClass('animating');
-					animEle = url + 'c' + currentEle;
-					animNode = url + 'n' + currentEle;
+					animEle = url + 'c' + currentEle + '';
+					animNode = url + 'n' + currentEle + '';
 					$(animEle).addClass('animating');
 					$(animNode).addClass('animating');
 					$('.animating')
@@ -304,11 +304,22 @@
 //Resets to normal slide sequence
 	function resetSub()
 	{
-		subSlide = false;
-		currentEle = 0;
-		subAnim = false;
-		animNode = null;
-		animEle = null;
+		if (url === '.s4')
+		{ 
+			subSlide = false;
+			currentEle = 0;
+			subAnim = true;
+			animNode = 0;
+			animEle = 0;
+		}
+		else
+		{
+			subSlide = false;
+			currentEle = 0;
+			subAnim = true;
+			animNode = 0;
+			animEle = 0;
+		}
 	}
 //Direct navigation functions
 		function toAuthorization()
@@ -405,8 +416,18 @@
 			}
 		})
 	};
-//Animation reset function
-	function animComplete()
+//Anb imation reset function
+	fun+
+	..3
+	.
+
+
+
+
+
+
+
+	.ction animComplete()
 	{
 		currentlyScrolling = false;
 		animQueue = false;

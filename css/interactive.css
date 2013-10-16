@@ -924,15 +924,15 @@
 {
 	display: block;
 }
-.s5b2l.s5c1.animating
+.bodyText .s5b2l.s5c1.animating
 {
 	display: inline-block;
 }
-.s5b2r.s5c1.animating
+.bodyText .s5b2r.s5c1.animating
 {
 	display: inline-block;
 }
-.s5b3.s5c2.animating
+.bodyText .s5c2.animating
 {
 	display: block;
 }
@@ -954,7 +954,7 @@
 	position: relative;
 	left: 34px;
 	top: -230px;
-	display: none;
+	display: block;
 }
 .s5 .footer .tillStatus.s5c1
 {
@@ -970,6 +970,21 @@
 	top: -230px;
 	display: none;
 }
+.s5 .footer .tillStatus.s5c0
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px 0px;
+}
+.s5 .footer .tillStatus.s5c1
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px -40px;
+}
+.s5 .footer .tillStatus.s5c2
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
 .s5 .footer .tillStatus.s5c0.animating
 {
 	display: block;
@@ -980,7 +995,7 @@
 	display: block;
 	background: url("../img/swipe_status.png") 0px -40px;
 }
-.s5 .footer .tillStatus.s5nc2.animating
+.s5 .footer .tillStatus.s5c2.animating
 {
 	display: block;
 	background: url("../img/swipe_status.png") 0px -80px;
