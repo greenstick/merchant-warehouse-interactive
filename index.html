@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>The Basics of Payment Processing</title>
 <!--Fonts-->
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Scada:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -25,7 +26,7 @@
 	<div class="interactiveWrapper">
 		<div class="interactive">
 			<div class="scroller">
-				<div class="slide s1">
+				<div class="slide s1 active">
 					<div class="title">
 						<div class="span1">THE BASICS OF</div><br>
 						<div class="span2">PAYMENT PROCESSING</div>
@@ -37,6 +38,7 @@
 						credit card to the time you receive payment.<br>
 						Three main processes ensure successful sales.
 					</div>
+					<div class="noJS bodyText yellowText">Please enable JavaScript in your browser to view this interactive</div>
 				</div>
 				<div class="slide s2">
 					<div class="nav"></div>
@@ -81,7 +83,11 @@
 					</div>
 				</div>
 				<div class="slide s3">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="current toAuthorization"></div>
+						<div class="toSettlement"></div>
+						<div class="toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
 						<div class="s3c1 leadText">
@@ -97,48 +103,61 @@
 					</div>
 				</div>
 				<div class="slide s4">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="current toAuthorization"></div>
+						<div class="toSettlement"></div>
+						<div class="toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
-						<div class="authpath"></div>
+						<div class="authSteps">
+							<div class="authPath"></div>
+							<div class="s4n1" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n2" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n3" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n4" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n5" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n6" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n7" data-anim="{opacity: 1}, 600, 'linear'"></div>
+						</div>
 						<div class="stepsText">
-							<div class="s4c1 leadText">
+							<div class="s4c0 leadText animating">
 								Authorization follows these steps. Generally, this<br>
 								entire process occurs <span class="boldText">within a matter of seconds:</span>
 							</div>
-							<div class="numberText no1 blueText">1.</div>
-							<div class="s4c2 bodyText">
+							<div class="numberText blueText s4c1">1.</div>
+							<div class="s4c1 bodyText">
 								Depending on how you run the card, this information is transmitted to a<br>
 								Processor (for instance, in a card-present environment, you swipe the card<br>
 								and enter the dollar amount, then send this informationto the Processor).
 							</div>
-							<div class="numberText no2 blueText">2.</div>
-							<div class="s4c3 bodyText">
+							<div class="numberText blueText s4c2">2.</div>
+							<div class="s4c2 bodyText">
 								The Processor forwards your request to the card payment brand, such as<br>
 								Visa&reg; or MasterCard&reg;.
 							</div>
-							<div class="numberText no3 blueText">3.</div>
-							<div class="s4c4 bodyText">
+							<div class="numberText blueText s4c3">3.</div>
+							<div class="s4c3 bodyText">
 								From there, the payment brand sends you your request to the card issuer<br>
 								(the bank that issued the card to the customer).
 							</div>
-							<div class="numberText no4 blueText">4.</div>
-							<div class="s4c5 bodyText">
+							<div class="numberText blueText s4c4">4.</div>
+							<div class="s4c4 bodyText">
 								The issuer approves or declines the transaction and and sends this response<br>
 								to the payment brand.
 							</div>
-							<div class="numberText no5 blueText">5.</div>
-							<div class="s4c6 bodyText">
+							<div class="numberText blueText s4c5">5.</div>
+							<div class="s4c5 bodyText">
 								The payment brand sends the response to the Processor.
 							</div>
-							<div class="numberText no6 blueText">6.</div>
-							<div class="s4c7 bodyText">
+							<div class="numberText blueText s4c6">6.</div>
+							<div class="s4c6 bodyText">
 								The Processor forwards the response to you (either via your point-of-sale<br>
 								device, e-commerce website, over the phone, etc.), so you can complete the<br>
 								transaction.
 							</div>
-							<div class="numberText no7 blueText">7.</div>
-							<div class="s4c8 bodyText">
+							<div class="numberText blueText s4c7">7.</div>
+							<div class="s4c7 bodyText">
 								The card will be <span class="greenbgText"> approved,</span> <span class="redbgText">declined,</span> or <span class="yellowbgText"> referred</span> for purchase. 
 							</div>
 						</div>
@@ -148,26 +167,30 @@
 					</div>
 				</div>
 				<div class="slide s5">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="current toAuthorization"></div>
+						<div class="toSettlement"></div>
+						<div class="toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
 						<div class="leadText">
-							<div class="s5l1">
+							<div class="s5c0 animating">
 								An <span class="greenText">approval</span> means that the dollar amount you specified will be<br>
 								reserved from the cardholder's available credit limit for future<br>
 								settlement.
 							</div>
-							<div class="s5l2">
+							<div class="s5c1">
 								A <span class="redText">decline</span> means that the customer's card<br>
 								cannot be used to complete the purchase.
 							</div>
-							<div class="s5l3">
+							<div class="s5c2">
 								A <span class="yellowText">referral</span> is a request for additional information<br>
 								(either from the merchant or the cardholder) before an authorization can be issued.
 							</div>
 						</div>
 						<div class="bodyText">
-							<div class="s5b2l">
+							<div class="s5b2l s5c1">
 								As a merchant, the most important part<br>
 								of payment processing is whether or not<br>
 								your customer is able to use his or her card.<br>
@@ -176,7 +199,7 @@
 								response for a number of reasons:
 								</span>
 							</div>
-							<div class="s5b2r">
+							<div class="s5b2r s5c1">
 								<div class="s5b2i1"></div>
 								<div class="s5b2it1">
 									has spent more<br>
@@ -189,7 +212,7 @@
 								</div>
 								<div class="s5b2i2"></div>
 							</div>
-							<div class="s5b3">
+							<div class="s5b3 s5c2">
 								An issuer may send a referral response as a security measure. If a referral is received,<br>
 								the Processor will contact the issuer directly and request authorization on your behalf.<br>
 								The issuer may request to speak with you or your customer/cardholder over the phone to<br>
@@ -218,13 +241,19 @@
 					</div>
 					<div class="footer">
 						<div class="tillDisplay"></div>
-						<div class="tillStatus"></div>
+						<div class="tillStatus s5c0"></div>
+						<div class="tillStatus s5c1"></div>
+						<div class="tillStatus s5c2"></div>
 						<div class="tillHand"></div>
 						<div class="tillOuter"></div>
 					</div>
 				</div>
 				<div class="slide s6">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="toAuthorization"></div>
+						<div class="current toSettlement"></div>
+						<div class="toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
 						<div class="leadText">
@@ -262,7 +291,11 @@
 					</div>
 				</div>
 				<div class="slide s7">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="toAuthorization"></div>
+						<div class="current toSettlement"></div>
+						<div class="toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
 						<div class="leadText">
@@ -307,7 +340,11 @@
 					</div>
 				</div>
 				<div class="slide s8">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="toAuthorization"></div>
+						<div class="current toSettlement"></div>
+						<div class="toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
 						<div class="leadText">
@@ -356,7 +393,11 @@
 					</div>
 				</div>
 				<div class="slide s9">
-					<div class="nav"></div>
+					<div class="nav">
+						<div class="toAuthorization"></div>
+						<div class="toSettlement"></div>
+						<div class="current toFunding"></div>
+					</div>
 					<div class="head"></div>
 					<div class="copy">
 						<div class="leadText">

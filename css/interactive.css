@@ -243,23 +243,29 @@
 {
 	position: relative;
 	left: 0px;
-	top: 226px;
+	top: 266px;
 	height: 142px;
 	text-align: center;
 	color: #FFFFFF;
 }
 .s1 .arrow
 {
-	position: relative;
+	position: absolute;
 	left: 40px;
-	top: 340px;
+	top: 468px;
 	z-index: 9999;
 	background: url("../img/white_scroll_arrow.png") 0px 0px;
 	width: 31px;
 	height: 50px;
 	opacity: 0;
 }
-
+.s1 .noJS
+{
+	position: relative;
+	left: 118px;
+	top: 248px;
+	z-index: 15;
+}
 /******************************************************
  * Slide 2
  **/
@@ -360,6 +366,34 @@
 	height: 60px;
 	background: url("../img/nav_sprite.png") 0px -120px;
 }
+.s3 .current.toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	background: url("../img/nav_sprite.png") -326px -60px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s3 .toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s3 .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
+}
 .s3 .head
 {
 	background: url("../img/section_title.png") 0px 0px;	
@@ -407,6 +441,34 @@
 	height: 60px;
 	background: url("../img/nav_sprite.png") 0px -120px;
 }
+.s4 .current.toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	background: url("../img/nav_sprite.png") -326px -60px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s4 .toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s4 .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
+}
 .s4 .head
 {
 	background: url("../img/section_title.png") 0px 0px;	
@@ -418,15 +480,107 @@
 	width: 630px;
 	height: 184px;
 }
-.s4 .copy .authpath
+.s4 .copy .authSteps
 {
 	position: relative;
 	left: 0px;
 	top: 23px;
+	height: 168px;
+	width: 630px;
+}
+.s4 .copy .authSteps .authPath
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
 	background: url("../img/auth_path.png") 0px 0px;
 	height: 168px;
 	width: 630px;
 	z-index: 5;
+}
+.s4 .copy .authSteps .s4n1
+{
+	position: relative;
+	left: 20px;
+	top: -168px;
+	background: url("../img/auth_path.png")-20px -180px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .authSteps .s4n2
+{
+	position: relative;
+	left: 167px;
+	top: -208px;
+	background: url("../img/auth_path.png")-167px -180px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .authSteps .s4n3
+{
+	position: relative;
+	left: 320px;
+	top: -248px;
+	background: url("../img/auth_path.png")-320px -180px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .authSteps .s4n4
+{
+	position: relative;
+	left: 472px;
+	top: -288px;
+	background: url("../img/auth_path.png")-472px -180px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .authSteps .s4n5
+{
+	position: relative;
+	left: 472px;
+	top: -218px;
+	background: url("../img/auth_path.png")-472px -180px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .authSteps .s4n6
+{
+	position: relative;
+	left: 320px;
+	top: -258px;
+	background: url("../img/auth_path.png")-320px -180px;
+	width: 34px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .authSteps .s4n7
+{
+	position: relative;
+	left: 167px;
+	top: -298px;
+	background: url("../img/auth_path.png")-167px 70px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
 }
 .s4 .copy .stepsText
 {
@@ -436,115 +590,190 @@
 	padding-left: 60px;
 	z-index: 10;
 }
-.s4 .copy .stepsText .no1
+.s4 .copy .stepsText .numberText.s4c1
 {
 	position: relative;
 	left: -30px;
 	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .no2
+.s4 .copy .stepsText .numberText.s4c2
 {
 	position: relative;
 	left: -34px;
 	top: -92px;
 	display: none;
+	opacity: 0;
+
 }
-.s4 .copy .stepsText .no3
+.s4 .copy .stepsText .numberText.s4c3
 {
 	position: relative;
 	left: -34px;
 	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .no4
+.s4 .copy .stepsText .numberText.s4c4
 {
 	position: relative;
 	left: -34px;
 	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .no5
+.s4 .copy .stepsText .numberText.s4c5
 {
 	position: relative;
 	left: -34px;
 	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .no6
+.s4 .copy .stepsText .numberText.s4c6
 {
 	position: relative;
 	left: -34px;
 	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .no7
+.s4 .copy .stepsText .numberText.s4c7
 {
 	position: relative;
-	left: 92px;
-	top: 12px;
+	left: -34px;
+	top: -92px;
 	display: none;
+	opacity: 0;
 }
 .s4 .copy .stepsText .bodyText
 {
 	padding-left: 20px;
 	z-index: 10;
 }
-.s4 .copy .stepsText .s4c1
+.s4 .copy .stepsText .s4c0
 {
 	position: relative;
 	left: 0px;
 	top: -94px;
-	display: block;
+	display: none;
 }
-.s4 .copy .stepsText .s4c2
+.s4 .copy .stepsText .bodyText.s4c1
 {
 	position: relative;
 	left: 0px;
 	top: -122px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .s4c3
-{
-	position: relative;
-	left: 0px;
-	top: -122px;
-	display: none;	
-}
-.s4 .copy .stepsText .s4c4
+.s4 .copy .stepsText .bodyText.s4c2
 {
 	position: relative;
 	left: 0px;
 	top: -122px;
 	display: none;
+	opacity: 0;	
 }
-.s4 .copy .stepsText .s4c5
+.s4 .copy .stepsText .bodyText.s4c3
 {
 	position: relative;
 	left: 0px;
 	top: -122px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .s4c6
+.s4 .copy .stepsText .bodyText.s4c4
 {
 	position: relative;
 	left: 0px;
 	top: -122px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .s4c7
+.s4 .copy .stepsText .bodyText.s4c5
 {
 	position: relative;
 	left: 0px;
 	top: -122px;
 	display: none;
+	opacity: 0;
 }
-.s4 .copy .stepsText .s4c8 
+.s4 .copy .stepsText .bodyText.s4c6
+{
+	position: relative;
+	left: 0px;
+	top: -122px;
+	display: none;
+	opacity: 0;
+}
+.s4 .copy .stepsText .bodyText.s4c7 
 {
 	position: relative;
 	left: 0px;
 	top: -110px;
 	display: none;
+	opacity: 0;
+}
+.s4 .copy .stepsText .s4c0.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c1.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c2.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c3.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c4.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c5.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c6.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .bodyText.s4c7.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c1.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c2.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c3.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c4.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c5.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c6.animating
+{
+	display: block;
+}
+.s4 .copy .stepsText .numberText.s4c7.animating
+{
+	display: block;
 }
 .s4 .footer .tillStatic
 {
@@ -578,6 +807,34 @@
 	width: 630px;
 	height: 60px;
 }
+.s5 .current.toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	background: url("../img/nav_sprite.png") -326px -60px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s5 .toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s5 .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
+}
 .s5 .head
 {
 	background: url("../img/section_title.png") 0px 0px;	
@@ -593,36 +850,35 @@
 	padding-left: 20px;
 	height: 84px;
 }
-.s5 .copy .leadText .s5l1
+.s5 .copy .leadText .s5c0
 {
-	display: none
+	display: none;
 }
-.s5 .copy .leadText .s5l2
+.s5 .copy .leadText .s5c1
 {
-	display: block;
+	display: none;
 }
-.s5 .copy .leadText .s5l3
+.s5 .copy .leadText .s5c2
 {
 	display: none;
 }
 .s5 .copy .bodyText
 {
-	/*remove opacity*/
 	opacity: 1;
 	padding-left: 20px;
 	height: 140px;
 }
-.s5 .copy .bodyText .s5b2l
+.s5 .copy .bodyText .s5b2l.s5c1
 {
-	display: inline-block;
+	display: none;
 	width: 315px;
 }
-.s5 .copy .bodyText .s5b2r
+.s5 .copy .bodyText .s5b2r.s5c1
 {
-	display: inline-block;
+	display: none;
 	width: 315px;
 }
-.s5b2i1
+.s5b2i1.s5c1
 {
 	position: relative;
 	left: 296px;
@@ -631,19 +887,19 @@
 	width: 202px;
 	height: 79px;
 }
-.s5b2it1
+.s5b2it1.s5c1
 {
 	position: relative;
 	left: 300px;
 	top: -72px;
 }
-.s5b2it2
+.s5b2it2.s5c1
 {
 	position: relative;
 	left: 416px;
 	top: -114px;
 }
-.s5b2i2
+.s5b2i2.s5c1
 {
 	position: relative;
 	left: 524px;
@@ -652,9 +908,33 @@
 	width: 86px;
 	height: 81px;
 }
-.s5b3
+.s5b3.s5c2
 {
 	display: none;
+}
+.s5 .copy .leadText .s5c0.animating
+{
+	display: block;
+}
+.s5 .copy .leadText .s5c1.animating
+{
+	display: block;
+}
+.s5 .copy .leadText .s5c2.animating
+{
+	display: block;
+}
+.s5b2l.s5c1.animating
+{
+	display: inline-block;
+}
+.s5b2r.s5c1.animating
+{
+	display: inline-block;
+}
+.s5b3.s5c2.animating
+{
+	display: block;
 }
 .s5 .footer
 {
@@ -669,11 +949,41 @@
 	left: 0px;
 	top: 0px;
 }
-.s5 .footer .tillStatus
+.s5 .footer .tillStatus.s5c0
 {
 	position: relative;
 	left: 34px;
 	top: -230px;
+	display: none;
+}
+.s5 .footer .tillStatus.s5c1
+{
+	position: relative;
+	left: 34px;
+	top: -230px;
+	display: none;
+}
+.s5 .footer .tillStatus.s5c2
+{
+	position: relative;
+	left: 34px;
+	top: -230px;
+	display: none;
+}
+.s5 .footer .tillStatus.s5c0.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px 0px;
+}
+.s5 .footer .tillStatus.s5c1.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px -40px;
+}
+.s5 .footer .tillStatus.s5nc2.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px -80px;
 }
 .s5 .footer .tillHand
 {
@@ -712,6 +1022,34 @@
 	width: 630px;
 	height: 60px;
 	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s6 .nav .toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s6 .nav .current.toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	background: url("../img/nav_sprite.png") -446px -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s6 .nav .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
 }
 .s6 .head
 {
@@ -805,6 +1143,34 @@
 	width: 630px;
 	height: 60px;
 	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s7 .nav .toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s7 .nav .current.toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	background: url("../img/nav_sprite.png") -446px -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s7 .nav .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
 }
 .s7 .head
 {
@@ -914,6 +1280,34 @@
 	height: 60px;
 	background: url("../img/nav_sprite.png") 0px -120px;
 }
+.s8 .nav .toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s8 .nav .current.toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	background: url("../img/nav_sprite.png") -446px -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s8 .nav .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
+}
 .s8 .head
 {
 	background: url("../img/section_title.png") 0px -50px;	
@@ -945,7 +1339,7 @@
 	height: 180px;
 	z-index: -5;
 }
-.s8 .copy .bodyText .settTrack .settNode
+.s8 .copy .bodyText .settTrack .s8n1
 {
 	position: relative;
 	left: 36px;
@@ -1067,6 +1461,34 @@
 	width: 630px;
 	height: 60px;
 	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s9 .nav .toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s9 .nav .toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s9 .nav .current.toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	background: url("../img/nav_sprite.png") -544px -60px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
 }
 .s9 .head
 {
