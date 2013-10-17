@@ -102,7 +102,7 @@
 						<div class="tillStatic"></div>
 					</div>
 				</div>
-				<div class="slide s4">
+				<div class="slide s4 sub">
 					<div class="nav">
 						<div class="current toAuthorization"></div>
 						<div class="toSettlement"></div>
@@ -112,16 +112,16 @@
 					<div class="copy">
 						<div class="authSteps">
 							<div class="authPath"></div>
-							<div class="s4n1" data-anim="{opacity: 1}, 600, 'linear'"></div>
-							<div class="s4n2" data-anim="{opacity: 1}, 600, 'linear'"></div>
-							<div class="s4n3" data-anim="{opacity: 1}, 600, 'linear'"></div>
-							<div class="s4n4" data-anim="{opacity: 1}, 600, 'linear'"></div>
-							<div class="s4n5" data-anim="{opacity: 1}, 600, 'linear'"></div>
-							<div class="s4n6" data-anim="{opacity: 1}, 600, 'linear'"></div>
-							<div class="s4n7" data-anim="{opacity: 1}, 600, 'linear'"></div>
+							<div class="s4n1 first"></div>
+							<div class="s4n2"></div>
+							<div class="s4n3"></div>
+							<div class="s4n4"></div>
+							<div class="s4n5"></div>
+							<div class="s4n6"></div>
+							<div class="s4n7 last"></div>
 						</div>
 						<div class="stepsText">
-							<div class="s4c0 leadText animating">
+							<div class="s4c0 leadText animating first">
 								Authorization follows these steps. Generally, this<br>
 								entire process occurs <span class="boldText">within a matter of seconds:</span>
 							</div>
@@ -156,8 +156,8 @@
 								device, e-commerce website, over the phone, etc.), so you can complete the<br>
 								transaction.
 							</div>
-							<div class="numberText blueText s4c7">7.</div>
-							<div class="s4c7 bodyText">
+							<div class="numberText blueText s4c7 last">7.</div>
+							<div class="s4c7 bodyText last">
 								The card will be <span class="greenbgText"> approved,</span> <span class="redbgText">declined,</span> or <span class="yellowbgText"> referred</span> for purchase. 
 							</div>
 						</div>
@@ -166,7 +166,7 @@
 						<div class="tillStatic"></div>
 					</div>
 				</div>
-				<div class="slide s5">
+				<div class="slide s5 sub">
 					<div class="nav">
 						<div class="current toAuthorization"></div>
 						<div class="toSettlement"></div>
@@ -175,7 +175,7 @@
 					<div class="head"></div>
 					<div class="copy">
 						<div class="leadText">
-							<div class="s5c0 animating">
+							<div class="s5c0 animating first">
 								An <span class="greenText">approval</span> means that the dollar amount you specified will be<br>
 								reserved from the cardholder's available credit limit for future<br>
 								settlement.
@@ -184,13 +184,13 @@
 								A <span class="redText">decline</span> means that the customer's card<br>
 								cannot be used to complete the purchase.
 							</div>
-							<div class="s5c2">
+							<div class="s5c2 last">
 								A <span class="yellowText">referral</span> is a request for additional information<br>
 								(either from the merchant or the cardholder) before an authorization can be issued.
 							</div>
 						</div>
 						<div class="bodyText">
-							<div class="s5c0"></div>
+							<div class="s5c0 animating first"></div>
 							<div class="s5b2l s5c1">
 								As a merchant, the most important part<br>
 								of payment processing is whether or not<br>
@@ -213,7 +213,7 @@
 								</div>
 								<div class="s5b2i2"></div>
 							</div>
-							<div class="s5b3 s5c2">
+							<div class="s5b3 s5c2 last">
 								An issuer may send a referral response as a security measure. If a referral is received,<br>
 								the Processor will contact the issuer directly and request authorization on your behalf.<br>
 								The issuer may request to speak with you or your customer/cardholder over the phone to<br>
@@ -340,7 +340,7 @@
 						<div class="tillInner"></div>
 					</div>
 				</div>
-				<div class="slide s8">
+				<div class="slide s8 sub">
 					<div class="nav">
 						<div class="toAuthorization"></div>
 						<div class="current toSettlement"></div>
@@ -354,36 +354,40 @@
 						<div class="bodyText">
 							<div class="settTrack">
 								<div class="settPath"></div>
-								<div class="settNode"></div>
+								<div class="s8n0 animating first"></div>
+								<div class="s8n1"></div>
+								<div class="s8n2"></div>
+								<div class="s8n3"></div>
+								<div class="s8n4 last"></div>
 							</div>
-							<div class="numberText no1 blueText">1.</div>
-							<div class="s8c1">
+							<div class="numberText no1 blueText s8c0 animating first">1.</div>
+							<div class="s8c0 animating first">
 								Typically your terminal or point of sale device automatically<br>
 								triggers, or "batches" a settlement, unless further steps are<br>
 								required (e.g. tip adjustment in a restaurant).
 							</div>
-							<div class="numberText no2 blueText">2.</div>
-							<div class="s8c2">
+							<div class="numberText no2 blueText s8c1">2.</div>
+							<div class="s8c1">
 								The Processor forwards your settlement request to the appropriate<br>
 								credit card payment bran for confirmation with the cardholder's<br>
 								issuing bank.
 							</div>
-							<div class="numberText no3 blueText">3.</div>
-							<div class="s8c3"><br>
+							<div class="numberText no3 blueText s8c2">3.</div>
+							<div class="s8c2"><br>
 								The Payment brand receives the settlement request and does two things:<br>
 								<span class="blueText">A.</span> Issues a credit to the Processor to reimburse you for the amount of the<br>
 								settled transaction. The issuer then pays the Processor for the transaction.<br>
 								<span class="blueText">B.</span> Issues a debit to the issuer to charge for the settled<br>
 								transaction. 
 							</div>
-							<div class="numberText no4 blueText">4.</div>
-							<div class="s8c4">
+							<div class="numberText no4 blueText s8c3">4.</div>
+							<div class="s8c3">
 								The issuer then posts the transation to the customer/cardholder's<br>
 								account. At the end of the billing period, the issuer sends the<br>
 								customer/cardholder his or her monthly statement.
 							</div>
-							<div class="numberText no5 blueText">5.</div>
-							<div class="s8c5">
+							<div class="numberText no5 blueText s8c4 last">5.</div>
+							<div class="s8c4 last">
 								The cardholder receives his or her credit card statement and pays<br>
 								the bill (to the card issuer).
 							</div>

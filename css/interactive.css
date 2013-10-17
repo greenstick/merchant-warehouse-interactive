@@ -1354,6 +1354,17 @@
 	height: 180px;
 	z-index: -5;
 }
+.s8 .copy .bodyText .settTrack .s8n0
+{
+	position: relative;
+	left: 36px;
+	top: -360px;
+	background: url("../img/sett_i4.png")-36px -180px;
+	width: 80px;
+	height: 180px;
+	z-index: 5;
+	opacity: 0;
+}
 .s8 .copy .bodyText .settTrack .s8n1
 {
 	position: relative;
@@ -1363,13 +1374,54 @@
 	width: 80px;
 	height: 180px;
 	z-index: 5;
+	opacity: 0;
+}
+.s8 .copy .bodyText .settTrack .s8n2
+{
+	position: relative;
+	left: 36px;
+	top: -180px;
+	background: url("../img/sett_i4.png")-36px -180px;
+	width: 80px;
+	height: 180px;
+	z-index: 5;
+	opacity: 0;
+}
+.s8 .copy .bodyText .settTrack .s8n3
+{
+	position: relative;
+	left: 36px;
+	top: -180px;
+	background: url("../img/sett_i4.png")-36px -180px;
+	width: 80px;
+	height: 180px;
+	z-index: 5;
+	opacity: 0;
+}
+.s8 .copy .bodyText .settTrack .s8n4
+{
+	position: relative;
+	left: 36px;
+	top: -180px;
+	background: url("../img/sett_i4.png")-36px -180px;
+	width: 80px;
+	height: 180px;
+	z-index: 5;	
+	opacity: 0;
+}
+.s8 .copy .bodyText .no0
+{
+	position: relative;
+	left: 92px;
+	top: 12px;
+	display: none;
 }
 .s8 .copy .bodyText .no1
 {
 	position: relative;
 	left: 92px;
 	top: 12px;
-	display: block;
+	display: none;
 }
 .s8 .copy .bodyText .no2
 {
@@ -1392,11 +1444,13 @@
 	top: 12px;
 	display: none;
 }
-.s8 .copy .bodyText .no5
+.s8 .copy .bodyText .s8c0
 {
 	position: relative;
-	left: 92px;
-	top: 12px;
+	left: 128px;
+	top: -12px;
+	width: 630px;
+	height: 180px;
 	display: none;
 }
 .s8 .copy .bodyText .s8c1
@@ -1412,7 +1466,7 @@
 {
 	position: relative;
 	left: 128px;
-	top: -12px;
+	top: -30px;
 	width: 630px;
 	height: 180px;
 	display: none;
@@ -1421,7 +1475,7 @@
 {
 	position: relative;
 	left: 128px;
-	top: -30px;
+	top: -12px;
 	width: 630px;
 	height: 180px;
 	display: none;
@@ -1435,13 +1489,44 @@
 	height: 180px;
 	display: none;
 }
-.s8 .copy .bodyText .s8c5
+.s8 .copy .bodyText .no0.animating
 {
-	position: relative;
-	left: 128px;
-	top: -12px;
-	width: 630px;
-	height: 180px;
+	display: block;
+}
+.s8 .copy .bodyText .no1.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .no2.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .no3.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .no4.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .s8c0.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .s8c1.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .s8c2.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .s8c3.animating
+{
+	display: block;
+}`
+.s8 .copy .bodyText .s8c4.animating
+{
 	display: block;
 }
 .s8 .footer
