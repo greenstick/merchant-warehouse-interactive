@@ -14,7 +14,7 @@
 		currentSlide = 1,
 		url = '.s1',
 		time = 1200,
-		removeLast = ['.s4c8', '.s5c3', '.s8c5'],
+		removeLast = ['.s4c8', '.s5c4', '.s8c4'],
 		removeFirst = ['.s4c-1', '.s5c-1', '.s8c-1'],
 		subArray = [4, 5, 8],
 		animQueue = false,
@@ -29,34 +29,50 @@
 //Loading initial settings & unbinding scroll event from window
 		$('.noJS').hide();
 		mobileDetect();
+		promptUser();
 		$('.toAuthorization').on('click', function()
 		{
-			$('.animating')
-				.animate({opacity: 0}, 600, 'linear')
-				.removeClass('animating');
-			resetAnims();
-			checkSlide();
-			toAuthorization();
+			if (animQueue === false)
+			{
+				$('.animating')
+					.animate({opacity: 0}, 600, 'linear')
+					.removeClass('animating');
+				resetAnims();
+				checkSlide();
+				toAuthorization();
+			}
 		})
 		$('.toSettlement').on('click', function()
 		{
-			$('.animating')
-				.animate({opacity: 0}, 600, 'linear')
-				.removeClass('animating');
-			resetAnims();
-			checkSlide();
-			toSettlement();
+			if (animQueue === false)
+			{
+				$('.animating')
+					.animate({opacity: 0}, 600, 'linear')
+					.removeClass('animating');
+				resetAnims();
+				checkSlide();
+				toSettlement();
+			}
 		})
 		$('.toFunding').on('click', function()
 		{
-			$('.animating')
-				.animate({opacity: 0}, 600, 'linear')
-				.removeClass('animating');
-			resetAnims();
-			checkSlide();
-			toFunding();
+			if (animQueue === false)
+			{
+				$('.animating')
+					.animate({opacity: 0}, 600, 'linear')
+					.removeClass('animating');
+				resetAnims();
+				checkSlide();
+				toFunding();
+			}
 		})
-		promptUser();
+		$('[data-node]').on('click', function()
+		{
+			if (animQueue === false)
+			{
+				toNode();
+			}
+		})
 		$(document).scroll(function()
 		{
 			window.scrollTo(0, 0);
@@ -171,8 +187,12 @@
 		if(url === '.s4' || url === '.s5' || url === '.s8')
 		{
 			animEle = url +'c0';
-			animNode = url + 'n0';
 			$(animEle).animate({opacity: 1}).addClass('animating');
+			if(url === '.s8')
+			{
+				animNode = url + 'n0';
+				$(animNode).animate({opacity: 1}).addClass('animating');
+			}
 		}
 		$(url)
 			.addClass('active')
@@ -350,6 +370,31 @@
 			setTimeout(animComplete, time);
 		}
 	}
+	function toNode()
+	{
+		if (animQueue === false)
+		{
+			var el = $(event.currentTarget),
+			anim = el.data('node');
+			animQueue = true;
+			animNode = anim;
+				var subString = animNode.split('n');
+					currentEle = parseInt(subString[1]);
+			animEle = url + 'c' + currentEle + '';
+			checkAnimating();
+			$(animEle).addClass('animating');
+			$(animNode).addClass('animating');
+			$('.animating')
+				.animate({opacity: 1}, 600, 'linear')
+				.delay(600)
+					.queue(function(next)
+						{
+							next();
+						})
+					.dequeue();
+			setTimeout(animComplete, time);
+		}
+	}
 
 /******************************************************************
 *	Utility functions
@@ -392,14 +437,7 @@
 //Checks to see if value is in array
 	function valueExists(array, value)
 	{
-		if($.inArray(array, value))
-		{
-			slideEnd = false;
-		}
-		else
-		{
-			slideEnd = true;
-		}
+		($.inArray(array, value)) ? slideEnd = false : slideEnd = true;
 	}
 //End of subanimation and navigating to next slide?
 	function eleLast()
@@ -479,6 +517,7 @@
 		currentEle = null;
 		animEle = null;
 		animNode = null;
+		checkAnimating();
 		slideEnd = true;
 	}
 })(jQuery);

@@ -843,42 +843,59 @@
 }
 .s5 .copy
 {
+	position: relative;
 	height: 224px;
 }
 .s5 .copy .leadText
 {
+	position: relative;
 	padding-left: 20px;
 	height: 84px;
 }
 .s5 .copy .leadText .s5c0
 {
 	display: none;
+	opacity: 0;
 }
 .s5 .copy .leadText .s5c1
 {
 	display: none;
+	opacity: 0;
 }
 .s5 .copy .leadText .s5c2
 {
 	display: none;
+	opacity: 0;
+}
+.s5 .copy .leadText .s5c3
+{
+	display: none;
+	opacity: 0;
 }
 .s5 .copy .bodyText
 {
-	opacity: 1;
+	position: relative;
 	padding-left: 20px;
 	height: 140px;
 }
 .s5 .copy .bodyText .s5b2l.s5c1
 {
+	position: relative;
 	display: none;
+	opacity: 0;
 	width: 315px;
+	line-height: 20px;
+	top: -12px;
 }
 .s5 .copy .bodyText .s5b2r.s5c1
 {
+	position: relative;
 	display: none;
+	opacity: 0;
 	width: 315px;
+	top: -36px;
 }
-.s5b2i1.s5c1
+.s5c1 .s5b2i1
 {
 	position: relative;
 	left: 296px;
@@ -887,19 +904,19 @@
 	width: 202px;
 	height: 79px;
 }
-.s5b2it1.s5c1
+.s5c1 .s5b2it1
 {
 	position: relative;
 	left: 300px;
 	top: -72px;
 }
-.s5b2it2.s5c1
+.s5c1 .s5b2it2
 {
 	position: relative;
 	left: 416px;
 	top: -114px;
 }
-.s5b2i2.s5c1
+.s5c1 .s5b2i2
 {
 	position: relative;
 	left: 524px;
@@ -908,9 +925,75 @@
 	width: 86px;
 	height: 81px;
 }
-.s5b3.s5c2
+.s5 .copy .bodyText .s5b3.s5c2
 {
+	position: relative;
+	top: -12px;
 	display: none;
+	line-height: 20px;
+	opacity: 0;
+}
+.s5 .copy .bodyText .s5b4.s5c3
+{
+	position: relative;
+	top: -84px;
+	display: none;
+	line-height: 20px;
+	opacity: 0;
+}
+.s5c3 .s5b4i1
+{
+	position: relative;
+	left: 0px;
+	top: 6px;
+	display: inline-block;
+	background: url("../img/referral_icons.png") -20px 0px;
+	width: 80px;
+	height: 80px;
+}
+.s5c3 .s5b4it1
+{
+	position: relative;
+	left: 0px;
+	top: -24px;
+	display: inline-block;
+	line-height: 16px;
+}
+.s5c3 .s5b4i2
+{
+	position: relative;
+	left: 0px;
+	top: 4px;
+	display: inline-block;
+	background: url("../img/referral_icons.png") 84px 0px;
+	width: 80px;
+	height: 80px;
+}
+.s5c3 .s5b4it2
+{
+	position: relative;
+	left: 0px;
+	top: -10px;
+	display: inline-block;
+	line-height: 16px;
+}
+.s5c3 .s5b4i3
+{
+	position: relative;
+	left: 0px;
+	top: 4px;
+	display: inline-block;
+	background: url("../img/referral_icons.png") 286px 0px;
+	width: 80px;
+	height: 80px;
+}
+.s5c3 .s5b4it3
+{
+	position: relative;
+	left: 0px;
+	top: -44px;
+	display: inline-block;
+	line-height: 16px;
 }
 .s5 .copy .leadText .s5c0.animating
 {
@@ -924,15 +1007,19 @@
 {
 	display: block;
 }
-.bodyText .s5b2l.s5c1.animating
+.s5 .copy .bodyText .s5b2l.s5c1.animating
 {
 	display: inline-block;
 }
-.bodyText .s5b2r.s5c1.animating
+.s5 .copy .bodyText .s5b2r.s5c1.animating
 {
 	display: inline-block;
 }
-.bodyText .s5c2.animating
+.s5 .copy .bodyText .s5b3.s5c2.animating
+{
+	display: block;
+}
+.s5 .copy .bodyText .s5b4.s5c3.animating
 {
 	display: block;
 }
@@ -970,6 +1057,13 @@
 	top: -230px;
 	display: none;
 }
+.s5 .footer .tillStatus.s5c3
+{
+	position: relative;
+	left: 34px;
+	top: -230px;
+	display: none;
+}
 .s5 .footer .tillStatus.s5c0
 {
 	display: none;
@@ -985,6 +1079,11 @@
 	display: none;
 	background: url("../img/swipe_status.png") 0px -80px;
 }
+.s5 .footer .tillStatus.s5c3
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
 .s5 .footer .tillStatus.s5c0.animating
 {
 	display: block;
@@ -996,6 +1095,11 @@
 	background: url("../img/swipe_status.png") 0px -40px;
 }
 .s5 .footer .tillStatus.s5c2.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
+.s5 .footer .tillStatus.s5c3.animating
 {
 	display: block;
 	background: url("../img/swipe_status.png") 0px -80px;
@@ -1334,9 +1438,14 @@
 	position: relative;
 	height: 272px;
 }
+.s8 .copy .leadText
+{
+	padding-left: 20px;
+}
 .s8 .copy .bodyText
 {
 	line-height: 18px;
+	z-index: 5;
 }
 .s8 .copy .bodyText .settTrack
 {
@@ -1357,175 +1466,201 @@
 .s8 .copy .bodyText .settTrack .s8n0
 {
 	position: relative;
-	left: 36px;
-	top: -360px;
-	background: url("../img/sett_i4.png")-36px -180px;
-	width: 80px;
-	height: 180px;
+	left: 64px;
+	top: -180px;
+	background: url("../img/sett_i4.png")-64px -180px;
+	width: 60px;
+	height: 60px;
 	z-index: 5;
 	opacity: 0;
 }
 .s8 .copy .bodyText .settTrack .s8n1
 {
 	position: relative;
-	left: 36px;
-	top: -180px;
-	background: url("../img/sett_i4.png")-36px -180px;
-	width: 80px;
-	height: 180px;
+	left: 164px;
+	top: -120px;
+	background: url("../img/sett_i4.png")-164px -300px;
+	width: 60px;
+	height: 60px;
 	z-index: 5;
 	opacity: 0;
 }
 .s8 .copy .bodyText .settTrack .s8n2
 {
 	position: relative;
-	left: 36px;
-	top: -180px;
-	background: url("../img/sett_i4.png")-36px -180px;
-	width: 80px;
-	height: 180px;
+	left: 276px;
+	top: -300px;
+	background: url("../img/sett_i4.png")-276px -180px;
+	width: 60px;
+	height: 60px;
 	z-index: 5;
 	opacity: 0;
 }
 .s8 .copy .bodyText .settTrack .s8n3
 {
 	position: relative;
-	left: 36px;
-	top: -180px;
-	background: url("../img/sett_i4.png")-36px -180px;
-	width: 80px;
-	height: 180px;
+	left: 384px;
+	top: -240px;
+	background: url("../img/sett_i4.png")-384px -300px;
+	width: 60px;
+	height: 60px;
 	z-index: 5;
 	opacity: 0;
 }
 .s8 .copy .bodyText .settTrack .s8n4
 {
 	position: relative;
-	left: 36px;
-	top: -180px;
-	background: url("../img/sett_i4.png")-36px -180px;
-	width: 80px;
-	height: 180px;
+	left: 496px;
+	top: -420px;
+	background: url("../img/sett_i4.png")-496px -180px;
+	width: 60px;
+	height: 60px;
 	z-index: 5;	
 	opacity: 0;
-}
-.s8 .copy .bodyText .no0
-{
-	position: relative;
-	left: 92px;
-	top: 12px;
-	display: none;
-}
-.s8 .copy .bodyText .no1
-{
-	position: relative;
-	left: 92px;
-	top: 12px;
-	display: none;
-}
-.s8 .copy .bodyText .no2
-{
-	position: relative;
-	left: 92px;
-	top: 12px;
-	display: none;
-}
-.s8 .copy .bodyText .no3
-{
-	position: relative;
-	left: 92px;
-	top: 12px;
-	display: none;
-}
-.s8 .copy .bodyText .no4
-{
-	position: relative;
-	left: 92px;
-	top: 12px;
-	display: none;
 }
 .s8 .copy .bodyText .s8c0
 {
 	position: relative;
-	left: 128px;
-	top: -12px;
-	width: 630px;
+	left: 92px;
+	top: 8px;
+	width: 500px;
 	height: 180px;
 	display: none;
 }
 .s8 .copy .bodyText .s8c1
 {
 	position: relative;
-	left: 128px;
-	top: -12px;
-	width: 630px;
+	left: 92px;
+	top: 8px;
+	width: 500px;
 	height: 180px;
 	display: none;
 }
 .s8 .copy .bodyText .s8c2
 {
 	position: relative;
-	left: 128px;
-	top: -30px;
-	width: 630px;
+	left: 92px;
+	top: -10px;
+	width: 500px;
 	height: 180px;
 	display: none;
+
 }
 .s8 .copy .bodyText .s8c3
 {
 	position: relative;
-	left: 128px;
-	top: -12px;
-	width: 630px;
+	left: 92px;
+	top: 8px;
+	width: 500px;
 	height: 180px;
 	display: none;
 }
 .s8 .copy .bodyText .s8c4
 {
 	position: relative;
-	left: 128px;
-	top: -12px;
-	width: 630px;
+	left: 92px;
+	top: 8px;
+	width: 500px;
 	height: 180px;
 	display: none;
 }
-.s8 .copy .bodyText .no0.animating
+.s8 .copy .bodyText .s8c0.no1
 {
-	display: block;
+	position: relative;
+	left: 92px;
+	top: -12px;
+	width: 40px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c1.no2
+{
+	position: relative;
+	left: 92px;
+	top: -12px;
+	width: 40px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c2.no3
+{
+	position: relative;
+	left: 92px;
+	top: -66px;
+	width: 40px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c3.no4
+{
+	position: relative;
+	left: 92px;
+	top: -12px;
+	width: 40px;
+	display: none;
+}
+.s8 .copy .bodyText .s8c4.no5
+{
+	position: relative;
+	left: 92px;
+	top: 6px;
+	width: 40px;
+	display: none;
 }
 .s8 .copy .bodyText .no1.animating
 {
-	display: block;
+	display: inline-block;
 }
 .s8 .copy .bodyText .no2.animating
 {
-	display: block;
+	display: inline-block;
 }
 .s8 .copy .bodyText .no3.animating
 {
-	display: block;
+	display: inline-block;
 }
 .s8 .copy .bodyText .no4.animating
 {
-	display: block;
+	display: inline-block;
+}
+.s8 .copy .bodyText .no5.animating
+{
+	display: inline-block;
 }
 .s8 .copy .bodyText .s8c0.animating
 {
-	display: block;
+	display: inline-block;
 }
 .s8 .copy .bodyText .s8c1.animating
 {
-	display: block;
+	display: inline-block;
 }
 .s8 .copy .bodyText .s8c2.animating
 {
-	display: block;
+	display: inline-block;
 }
 .s8 .copy .bodyText .s8c3.animating
 {
-	display: block;
-}`
+	display: inline-block;
+}
 .s8 .copy .bodyText .s8c4.animating
+{
+	display: inline-block;
+}
+.s8 .copy .bodyText .settTrack .s8n0.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .settTrack .s8n1.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .settTrack .s8n2.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .settTrack .s8n3.animating
+{
+	display: block;
+}
+.s8 .copy .bodyText .settTrack .s8n4.animating
 {
 	display: block;
 }
