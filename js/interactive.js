@@ -13,7 +13,7 @@
 		currentlyScrolling = false,
 		currentSlide = 1,
 		url = '.s1',
-		time = 1200,
+		time = 800,
 		removeLast = ['.s4c8', '.s5c4', '.s8c4'],
 		removeFirst = ['.s4c-1', '.s5c-1', '.s8c-1'],
 		subArray = [4, 5, 8],
@@ -35,50 +35,57 @@
 			if (animQueue === false)
 			{
 				$('.animating')
-					.animate({opacity: 0}, 600, 'linear')
+					.animate({'opacity': 0}, 600, 'linear')
 					.removeClass('animating');
 				resetAnims();
 				checkSlide();
 				toAuthorization();
 			}
-		})
+		});
 		$('.toSettlement').on('click', function()
 		{
 			if (animQueue === false)
 			{
 				$('.animating')
-					.animate({opacity: 0}, 600, 'linear')
+					.animate({'opacity': 0}, 600, 'linear')
 					.removeClass('animating');
 				resetAnims();
 				checkSlide();
 				toSettlement();
 			}
-		})
+		});
 		$('.toFunding').on('click', function()
 		{
 			if (animQueue === false)
 			{
 				$('.animating')
-					.animate({opacity: 0}, 600, 'linear')
+					.animate({'opacity': 0}, 600, 'linear')
 					.removeClass('animating');
 				resetAnims();
 				checkSlide();
 				toFunding();
 			}
-		})
-		$('[data-node]').on('click', function()
+		});
+		$('[data-node]').on('click', function(event)
 		{
 			if (animQueue === false)
 			{
-				toNode();
+				toNode(event);
 			}
-		})
-		$(document).scroll(function()
-		{
-			window.scrollTo(0, 0);
-			$(document).unbind("scroll");
 		});
-		bindScrollControl();
+		$('.s5b2i2').on('click', function()
+		{
+			$('.why').fadeIn(600);
+		});
+		$('.why').on('click', function()
+		{
+			$(this).fadeOut(600);
+		});
+		$(document).ready(function()
+		{
+			bindScrollControl();
+		});
+
 	});
 
 /******************************************************************
@@ -108,36 +115,36 @@
 				delta = (offset.y);
 				if (Math.abs(delta) >= 10)
 				{
-					event.preventDefault ? event.preventDefault() : event.returnValue = false;
-					handle(delta);
+					$('.interactiveWrapper').on('touchmove', function (event)
+					{
+						event.preventDefault ? event.preventDefault() : event.returnValue = false;
+						handle(delta);
+					});
 				}
 			}
 		}
 //Re-binds scroll function to interactive element on mouse & trackpad devices
 		else
 		{
-			function wheel(event)
+			$('.interactiveWrapper').on('mousewheel DOMMouseScroll MozMousePixelScroll', function (event)
 			{
 				var delta = 0;
 				if (!event) event = window.event;
-				if (event.wheelDelta)
+				if (event.originalEvent.wheelDelta)
 				{
-					delta = event.wheelDelta / 120;
+					delta = event.originalEvent.wheelDelta / 120;
 				}
-				else if (event.detail)
+				else if (event.originalEvent.detail)
 				{
-					delta = -event.detail / 3;
+					delta = -event.originalEvent.detail / 3;
 				}
 				if (delta)
 				{
 					handle(delta);
 					event.preventDefault ? event.preventDefault() : event.returnValue = false;
 				}
-			}
+			});
 		}
-//Initialize
-		if (window.addEventListener) $('.interactive')[0].addEventListener('DOMMouseScroll', wheel, false);
-		window.onmousewheel = $('.interactive')[0].onmousewheel = wheel;
 	}
 //Directs navigation function calls via wheel delta event
 	function handle(delta)
@@ -146,6 +153,7 @@
 		{
 			currentlyScrolling = true;
 			checkSlide();
+			promptUser();
 			if(subSlide === false)
 			{
 				(delta < 0) ? nextFade() : previousFade();
@@ -187,16 +195,16 @@
 		if(url === '.s4' || url === '.s5' || url === '.s8')
 		{
 			animEle = url +'c0';
-			$(animEle).animate({opacity: 1}).addClass('animating');
+			$(animEle).animate({'opacity': 1}).addClass('animating');
 			if(url === '.s8')
 			{
 				animNode = url + 'n0';
-				$(animNode).animate({opacity: 1}).addClass('animating');
+				$(animNode).animate({'opacity': 1}).addClass('animating');
 			}
 		}
 		$(url)
 			.addClass('active')
-			.animate({opacity: 1}, 400, 'linear')
+			.animate({'opacity': 1}, 400, 'linear')
 				.delay(400)
 				.queue(function(next)
 					{
@@ -209,7 +217,7 @@
 	function nextFade()
 	{
 		animQueue = true;
-		$(url).animate({opacity: 0}, 400, 'linear');
+		$(url).animate({'opacity': 0}, 400, 'linear');
 		currentSlide = parseInt(currentSlide + 1);
 		url = '.s' + currentSlide + '';
 	}
@@ -217,7 +225,7 @@
 	function previousFade()
 	{
 		animQueue = true;
-		$(url).animate({opacity: 0}, 400, 'linear');
+		$(url).animate({'opacity': 0}, 400, 'linear');
 		currentSlide = parseInt(currentSlide) - 1;
 		url = '.s' + currentSlide + '';
 	}
@@ -238,7 +246,7 @@
 			$(animEle).addClass('animating');
 			$(animNode).addClass('animating');
 			$('.animating')
-				.animate({opacity: 1}, 600, 'linear')
+				.animate({'opacity': 1}, 600, 'linear')
 				.delay(600)
 					.queue(function(next)
 						{
@@ -250,7 +258,7 @@
 		else
 		{
 			$('.animating')
-				.animate({opacity: 0}, 600, 'linear')
+				.animate({'opacity': 0}, 600, 'linear')
 				.removeClass('animating');
 			currentEle = parseInt(currentEle + 1);
 			animEle = url + 'c' + currentEle + '';
@@ -258,7 +266,7 @@
 			$(animEle).addClass('animating');
 			$(animNode).addClass('animating');
 			$('.animating')
-				.animate({opacity: 1}, 600, 'linear')
+				.animate({'opacity': 1}, 600, 'linear')
 				.delay(600)
 					.queue(function(next)
 						{
@@ -284,7 +292,7 @@
 		else
 		{
 			$('.animating')
-				.animate({opacity: 0}, 600, 'linear')
+				.animate({'opacity': 0}, 600, 'linear')
 				.removeClass('animating');
 			currentEle = parseInt(currentEle - 1);
 			animEle = url + 'c' + currentEle + '';
@@ -292,7 +300,7 @@
 			$(animEle).addClass('animating');
 			$(animNode).addClass('animating');
 			$('.animating')
-				.animate({opacity: 1}, 600, 'linear')
+				.animate({'opacity': 1}, 600, 'linear')
 				.delay(600)
 					.queue(function(next)
 						{
@@ -312,12 +320,12 @@
 		if (animQueue === false)
 		{
 			animQueue = true;
-			$(url).animate({opacity: 0}, 400, 'linear');
+			$(url).animate({'opacity': 0}, 400, 'linear');
 			url = '.s3';
 			currentSlide = 3;
 			$(url)
 				.addClass('active')
-				.animate({opacity: 1}, 400, 'linear')
+				.animate({'opacity': 1}, 400, 'linear')
 					.delay(400)
 					.queue(function(next)
 						{
@@ -333,12 +341,12 @@
 		if (animQueue === false)
 		{
 			animQueue = true;
-			$(url).animate({opacity: 0}, 400, 'linear');
+			$(url).animate({'opacity': 0}, 400, 'linear');
 			url = '.s6';
 			currentSlide = 6;
 			$(url)
 				.addClass('active')
-				.animate({opacity: 1}, 400, 'linear')
+				.animate({'opacity': 1}, 400, 'linear')
 					.delay(400)
 					.queue(function(next)
 						{
@@ -354,12 +362,12 @@
 		if (animQueue === false)
 		{
 			animQueue = true;
-			$(url).animate({opacity: 0}, 400, 'linear');
+			$(url).animate({'opacity': 0}, 400, 'linear');
 			url = '.s9';
 			currentSlide = 9;
 			$(url)
 				.addClass('active')
-				.animate({opacity: 1}, 400, 'linear')
+				.animate({'opacity': 1}, 400, 'linear')
 					.delay(400)
 					.queue(function(next)
 						{
@@ -370,22 +378,22 @@
 			setTimeout(animComplete, time);
 		}
 	}
-	function toNode()
+	function toNode(event)
 	{
 		if (animQueue === false)
 		{
-			var el = $(event.currentTarget),
-			anim = el.data('node');
+			var anim = $(event.target).attr('data-node');
 			animQueue = true;
 			animNode = anim;
 				var subString = animNode.split('n');
-					currentEle = parseInt(subString[1]);
-			animEle = url + 'c' + currentEle + '';
+				var currentElem = parseInt(subString[1]);
+			animEle = url + 'c' + currentElem + '';
+			currentEle = currentElem;
 			checkAnimating();
 			$(animEle).addClass('animating');
 			$(animNode).addClass('animating');
 			$('.animating')
-				.animate({opacity: 1}, 600, 'linear')
+				.animate({'opacity': 1}, 600, 'linear')
 				.delay(600)
 					.queue(function(next)
 						{
@@ -400,6 +408,15 @@
 *	Utility functions
 ******************************************************************/
 
+//Implement indexOf for IE
+if (!Array.prototype.indexOf) {
+	Array.prototype.indexOf = function(obj, start) {
+	     for (var i = (start || 0), j = this.length; i < j; i++) {
+	         if (this[i] === obj) { return i; }
+	     }
+	     return -1;
+	}
+}
 //Check whether user is mobile
 	function mobileDetect()
 	{
@@ -415,12 +432,12 @@
 		else
 		{
 			clearTimeout(arrowAnimate);
-			$('.arrow').animate({opacity: 0}, 0);
+			$('.arrow').animate({'opacity': 0});
 		};
 //Animates arrow on slide 1
 		function arrowAnimate()
 		{
-			$('.arrow').animate({opacity: 1}, 1000, 'linear');
+			$('.arrow').animate({'opacity': 1}, 1000, 'linear');
 			$('.arrow').fadeIn(1000).delay(200).fadeOut(1000, function()
 			{
 				if(currentSlide === 1)
@@ -435,19 +452,19 @@
 		};
 	};
 //Checks to see if value is in array
-	function valueExists(array, value)
+	function valueExists(value, array)
 	{
-		($.inArray(array, value)) ? slideEnd = false : slideEnd = true;
+		($.inArray(value, array)) ? slideEnd = false : slideEnd = true;
 	}
 //End of subanimation and navigating to next slide?
 	function eleLast()
 	{
-		valueExists(removeLast, animEle);
+		valueExists(animEle,removeLast);
 	}
 //End of subanimation and navigating to previous slide?
 	function eleFirst()
 	{
-		valueExists(removeFirst, animEle);
+		valueExists(animEle,removeLast);
 	}
 //Retrieves sub slides for animation
 	function checkSlide()
@@ -488,7 +505,7 @@
 			$(this)
 				.not(url)
 				.removeClass('active')
-				.animate({opacity: 0});
+				.animate({'opacity': 0});
 		})
 	}
 //Clears the animating class from each inactive animation element
@@ -501,7 +518,7 @@
 				{
 					$(this)
 						.removeClass('animating')
-						.animate({opacity: 0}, 600, 'linear')
+						.animate({'opacity': 0}, 600, 'linear');
 				}
 			})
 	}

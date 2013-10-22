@@ -9,9 +9,15 @@
 /******************************************************
  * Global Styles
  **/
-
 .interactiveWrapper
 {
+/*Demo style*/
+/*	position: absolute;
+	top: 404px;
+	left: 528px;
+	width: 630px;*/
+
+/*Live style*/
 	position: relative;
 	width: 630px;
 	margin: 0 auto;
@@ -36,7 +42,6 @@
 	position: relative;
 	width: 630px;
 	height: 550px;
-/*	border: 1px dashed #2F2F2F;*/
 }
 .bg
 {
@@ -317,7 +322,7 @@
 	position: relative;
 	display: inline-block;
 	padding-left: 34px;
-	padding-right: 28px;
+	padding-right: 0px;
 }
 .s2 .copy .c1 .leadText
 {
@@ -663,7 +668,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: -122px;
+	top: -124px;
 	display: none;
 	opacity: 0;
 }
@@ -671,7 +676,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: -122px;
+	top: -124px;
 	display: none;
 	opacity: 0;	
 }
@@ -679,7 +684,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: -122px;
+	top: -124px;
 	display: none;
 	opacity: 0;
 }
@@ -687,7 +692,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: -122px;
+	top: -124px;
 	display: none;
 	opacity: 0;
 }
@@ -695,7 +700,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: -122px;
+	top: -110px;
 	display: none;
 	opacity: 0;
 }
@@ -703,7 +708,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: -122px;
+	top: -124px;
 	display: none;
 	opacity: 0;
 }
@@ -924,6 +929,23 @@
 	background: url("../img/why.png") 0px 0px;
 	width: 86px;
 	height: 81px;
+	cursor: pointer;
+}
+.why
+{
+	position: relative;
+	left: 279px;
+	top: -304px;
+	width: 300px;
+	height: 115px;
+	border: 2px solid #EFB42A;
+	border-radius: 48px;
+	z-index: 100;
+	background-color: #EFB42A;
+	display: none;
+	padding-left: 20px;
+	padding-top: 20px;
+	cursor: pointer;
 }
 .s5 .copy .bodyText .s5b3.s5c2
 {
@@ -1466,57 +1488,62 @@
 .s8 .copy .bodyText .settTrack .s8n0
 {
 	position: relative;
-	left: 64px;
-	top: -180px;
-	background: url("../img/sett_i4.png")-64px -180px;
-	width: 60px;
-	height: 60px;
+	left: 74px;
+	top: -168px;
+	background: url("../img/sett_i4.png")-74px -192px;
+	width: 44px;
+	height: 44px;
 	z-index: 5;
 	opacity: 0;
+	cursor: pointer;
 }
 .s8 .copy .bodyText .settTrack .s8n1
 {
 	position: relative;
-	left: 164px;
-	top: -120px;
-	background: url("../img/sett_i4.png")-164px -300px;
-	width: 60px;
-	height: 60px;
+	left: 180px;
+	top: -100px;
+	background: url("../img/sett_i4.png")-180px -304px;
+	width: 44px;
+	height: 44px;
 	z-index: 5;
 	opacity: 0;
+	cursor: pointer;
 }
 .s8 .copy .bodyText .settTrack .s8n2
 {
 	position: relative;
-	left: 276px;
-	top: -300px;
-	background: url("../img/sett_i4.png")-276px -180px;
-	width: 60px;
-	height: 60px;
+	left: 292px;
+	top: -254px;
+	background: url("../img/sett_i4.png")-292px -193px;
+	width: 44px;
+	height: 44px;
 	z-index: 5;
 	opacity: 0;
+	cursor: pointer;
 }
 .s8 .copy .bodyText .settTrack .s8n3
 {
 	position: relative;
-	left: 384px;
-	top: -240px;
-	background: url("../img/sett_i4.png")-384px -300px;
-	width: 60px;
-	height: 60px;
+	left: 402px;
+	top: -188px;
+	background: url("../img/sett_i4.png")-402px -304px;
+	width: 44px;
+	height: 44px;
 	z-index: 5;
 	opacity: 0;
+	cursor: pointer;
 }
 .s8 .copy .bodyText .settTrack .s8n4
 {
 	position: relative;
-	left: 496px;
-	top: -420px;
-	background: url("../img/sett_i4.png")-496px -180px;
-	width: 60px;
-	height: 60px;
+	left: 512px;
+	top: -342px;
+	background: url("../img/sett_i4.png")-512px -194px;
+	width: 44px;
+	height: 44px;
 	z-index: 5;	
 	opacity: 0;
+	cursor: pointer;
 }
 .s8 .copy .bodyText .s8c0
 {
