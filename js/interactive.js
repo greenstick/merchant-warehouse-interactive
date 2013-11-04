@@ -12,11 +12,11 @@
 	var isMobile = true,
 		currentlyScrolling = false,
 		currentSlide = 1,
-		url = '.s1',
-		time = 800,
-		removeLast = ['.s4c8', '.s5c4', '.s8c4'],
-		removeFirst = ['.s4c-1', '.s5c-1', '.s8c-1'],
-		subArray = [4, 5, 8],
+		url = '.s1', //Inital slide
+		time = 1000, //Delay between animation selections
+		removeLast = ['.s4c8', '.s5c4', '.s8c4'], //Define last animated element of subslides +1
+		removeFirst = ['.s4c-1', '.s5c-1', '.s8c-1'], //Define first animated element of subslide -1
+		subArray = [4, 5, 8], //Define subslides
 		animQueue = false,
 		subSlide = false, 
 		currentEle = null,
@@ -30,6 +30,7 @@
 		$('.noJS').hide();
 		mobileDetect();
 		promptUser();
+//Direct slide navigation functions
 		$('.toAuthorization').on('click', function()
 		{
 			if (animQueue === false)
@@ -66,6 +67,7 @@
 				toFunding();
 			}
 		});
+//Direct animation navigation function
 		$('[data-node]').on('click', function(event)
 		{
 			if (animQueue === false)
@@ -73,6 +75,7 @@
 				toNode(event);
 			}
 		});
+//Tooltip function
 		$('.s5b2i2').on('click', function()
 		{
 			$('.why').fadeIn(600);
@@ -92,7 +95,7 @@
 *	Core functions
 ******************************************************************/
 
-//Re-binds scroll function to interactive element on mobile devices
+//Binds scroll function on touch to interactive element on mobile devices
 	function bindScrollControl()
 	{
 		if (isMobile === true)
@@ -123,7 +126,7 @@
 				}
 			}
 		}
-//Re-binds scroll function to interactive element on mouse & trackpad devices
+//Binds scroll function on scroll to interactive element on mouse & trackpad devices
 		else
 		{
 			$('.interactiveWrapper').on('mousewheel DOMMouseScroll MozMousePixelScroll', function (event)
@@ -154,6 +157,7 @@
 			currentlyScrolling = true;
 			checkSlide();
 			promptUser();
+//Not subslide
 			if(subSlide === false)
 			{
 				(delta < 0) ? nextFade() : previousFade();
@@ -161,6 +165,7 @@
 				navigateSlides(url, time);
 				setTimeout(animComplete, time);
 			}
+//Subslide last element
 			else if ($(animEle).hasClass('last') && delta < 0)
 			{
 				resetAnims();
@@ -169,6 +174,7 @@
 				navigateSlides(url, time);
 				setTimeout(animComplete, time);
 			}
+//Subslide first element
 			else if ($(animEle).hasClass('first') && delta > 0)
 			{
 				resetAnims();
@@ -177,6 +183,7 @@
 				navigateSlides(url, time);
 				setTimeout(animComplete, time);
 			}
+//Subslide next element
 			else
 			{
 				(delta < 0) ? nextElement() : previousElement();
@@ -408,7 +415,7 @@
 *	Utility functions
 ******************************************************************/
 
-//Implement indexOf for IE
+//Implement indexOf function for IE
 if (!Array.prototype.indexOf) {
 	Array.prototype.indexOf = function(obj, start) {
 	     for (var i = (start || 0), j = this.length; i < j; i++) {
@@ -417,7 +424,7 @@ if (!Array.prototype.indexOf) {
 	     return -1;
 	}
 }
-//Check whether user is mobile
+//Check whether user is mobile - feature detection is preferable to this
 	function mobileDetect()
 	{
 		(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) ? isMobile = true : isMobile = false;
@@ -479,7 +486,7 @@ if (!Array.prototype.indexOf) {
 			}
 		}
 	}
-//Updates slide count on show recycle
+//Maintains accurate slide index on show recycle
 	function checkPosition()
 	{
 		if (currentSlide === 0)
