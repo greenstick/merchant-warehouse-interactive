@@ -9,15 +9,12 @@
 /******************************************************
  * Global Styles
  **/
+/* html
+ {
+ 	background-color: #DDAAEE;
+ }*/
 .interactiveWrapper
 {
-/*Demo style*/
-/*	position: absolute;
-	top: 404px;
-	left: 528px;
-	width: 630px;*/
-
-/*Live style*/
 	position: relative;
 	width: 630px;
 	margin: 0 auto;
@@ -256,12 +253,12 @@
 .s1 .arrow
 {
 	position: absolute;
-	left: 40px;
-	top: 468px;
+	left: 20px;
+	top: 420px;
 	z-index: 9999;
 	background: url("../img/white_scroll_arrow.png") 0px 0px;
-	width: 31px;
-	height: 50px;
+	width: 66px;
+	height: 96px;
 	opacity: 0;
 }
 .s1 .noJS
@@ -485,309 +482,142 @@
 	width: 630px;
 	height: 184px;
 }
-.s4 .copy .authSteps
+.s4 .copy .introSteps
 {
-	position: relative;
-	left: 0px;
-	top: 23px;
-	height: 168px;
-	width: 630px;
-}
-.s4 .copy .authSteps .authPath
-{
-	position: relative;
-	left: 0px;
-	top: 0px;
-	background: url("../img/auth_path.png") 0px 0px;
-	height: 168px;
-	width: 630px;
-	z-index: 5;
-}
-.s4 .copy .authSteps .s4n1
-{
-	position: relative;
-	left: 20px;
-	top: -168px;
-	background: url("../img/auth_path.png")-20px -180px;
-	width: 36px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .authSteps .s4n2
-{
-	position: relative;
-	left: 167px;
-	top: -208px;
-	background: url("../img/auth_path.png")-167px -180px;
-	width: 36px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .authSteps .s4n3
-{
-	position: relative;
-	left: 320px;
-	top: -248px;
-	background: url("../img/auth_path.png")-320px -180px;
-	width: 36px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .authSteps .s4n4
-{
-	position: relative;
-	left: 472px;
-	top: -288px;
-	background: url("../img/auth_path.png")-472px -180px;
-	width: 36px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .authSteps .s4n5
-{
-	position: relative;
-	left: 472px;
-	top: -218px;
-	background: url("../img/auth_path.png")-472px -180px;
-	width: 36px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .authSteps .s4n6
-{
-	position: relative;
-	left: 320px;
-	top: -258px;
-	background: url("../img/auth_path.png")-320px -180px;
-	width: 34px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .authSteps .s4n7
-{
-	position: relative;
-	left: 167px;
-	top: -298px;
-	background: url("../img/auth_path.png")-167px 70px;
-	width: 36px;
-	height: 40px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .stepsText
-{
-	position: relative;
-	left: 0px;
-	top: 0px;
-	padding-left: 60px;
-	z-index: 10;
-}
-.s4 .copy .stepsText .numberText.s4c1
-{
-	position: relative;
-	left: -30px;
-	top: -92px;
-	display: none;
-	opacity: 0;
-}
-.s4 .copy .stepsText .numberText.s4c2
-{
-	position: relative;
-	left: -34px;
-	top: -92px;
-	display: none;
-	opacity: 0;
 
 }
-.s4 .copy .stepsText .numberText.s4c3
+.s4 .copy .introSteps .introPath
 {
 	position: relative;
-	left: -34px;
-	top: -92px;
-	display: none;
-	opacity: 0;
+	left: 18px;
+	top: 0px;
+	background: url("../img/author_icons_sprite.png") 0px 0px;
+	width: 560px;
+	height: 112px;
+	z-index: 10;
 }
-.s4 .copy .stepsText .numberText.s4c4
+.s4 .copy .introSteps .s4n0
 {
 	position: relative;
-	left: -34px;
-	top: -92px;
-	display: none;
+	left: 24px;
+	top: -107px;
+	background: url("../img/author_icons_sprite.png") -6px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
 	opacity: 0;
+	cursor: pointer;
 }
-.s4 .copy .stepsText .numberText.s4c5
+.s4 .copy .introSteps .s4n1
 {
 	position: relative;
-	left: -34px;
-	top: -92px;
-	display: none;
+	left: 135px;
+	top: -207px;
+	background: url("../img/author_icons_sprite.png") 444px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
 	opacity: 0;
+	cursor: pointer;	
 }
-.s4 .copy .stepsText .numberText.s4c6
+.s4 .copy .introSteps .s4n2
 {
 	position: relative;
-	left: -34px;
-	top: -92px;
-	display: none;
+	left: 246px;
+	top: -307px;
+	background: url("../img/author_icons_sprite.png") 891px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
 	opacity: 0;
+	cursor: pointer;
 }
-.s4 .copy .stepsText .numberText.s4c7
+.s4 .copy .introSteps .s4n3
 {
 	position: relative;
-	left: -34px;
-	top: -92px;
-	display: none;
+	left: 358px;
+	top: -407px;
+	background: url("../img/author_icons_sprite.png") 1339px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
 	opacity: 0;
+	cursor: pointer;
+}
+.s4 .copy .introSteps .s4n4
+{
+	position: relative;
+	left: 470px;
+	top: -507px;
+	background: url("../img/author_icons_sprite.png") 1787px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.stepsText
+{
+	position: relative;
+	left: 0px;
+	top: -496px;
 }
 .s4 .copy .stepsText .bodyText
 {
 	padding-left: 20px;
-	z-index: 10;
 }
 .s4 .copy .stepsText .s4c0
 {
-	position: relative;
-	left: 0px;
-	top: -94px;
 	display: none;
 }
-.s4 .copy .stepsText .bodyText.s4c1
+.s4 .copy .stepsText .s4c1
 {
-	position: relative;
-	left: 0px;
-	top: -124px;
 	display: none;
-	opacity: 0;
 }
-.s4 .copy .stepsText .bodyText.s4c2
+.s4 .copy .stepsText .s4c2
 {
-	position: relative;
-	left: 0px;
-	top: -124px;
 	display: none;
-	opacity: 0;	
 }
-.s4 .copy .stepsText .bodyText.s4c3
+.s4 .copy .stepsText .s4c3
 {
-	position: relative;
-	left: 0px;
-	top: -124px;
 	display: none;
-	opacity: 0;
 }
-.s4 .copy .stepsText .bodyText.s4c4
+.s4 .copy .stepsText .s4c4
 {
-	position: relative;
-	left: 0px;
-	top: -124px;
 	display: none;
-	opacity: 0;
-}
-.s4 .copy .stepsText .bodyText.s4c5
-{
-	position: relative;
-	left: 0px;
-	top: -110px;
-	display: none;
-	opacity: 0;
-}
-.s4 .copy .stepsText .bodyText.s4c6
-{
-	position: relative;
-	left: 0px;
-	top: -124px;
-	display: none;
-	opacity: 0;
-}
-.s4 .copy .stepsText .bodyText.s4c7 
-{
-	position: relative;
-	left: 0px;
-	top: -110px;
-	display: none;
-	opacity: 0;
 }
 .s4 .copy .stepsText .s4c0.animating
 {
 	display: block;
 }
-.s4 .copy .stepsText .bodyText.s4c1.animating
+.s4 .copy .stepsText .s4c1.animating
 {
 	display: block;
 }
-.s4 .copy .stepsText .bodyText.s4c2.animating
+.s4 .copy .stepsText .s4c2.animating
 {
 	display: block;
 }
-.s4 .copy .stepsText .bodyText.s4c3.animating
+.s4 .copy .stepsText .s4c3.animating
 {
 	display: block;
 }
-.s4 .copy .stepsText .bodyText.s4c4.animating
+.s4 .copy .stepsText .s4c4.animating
 {
 	display: block;
 }
-.s4 .copy .stepsText .bodyText.s4c5.animating
+.s4 .copy .leadText
 {
-	display: block;
-}
-.s4 .copy .stepsText .bodyText.s4c6.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .bodyText.s4c7.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c1.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c2.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c3.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c4.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c5.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c6.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .numberText.s4c7.animating
-{
-	display: block;
+	padding-left: 20px;
 }
 .s4 .footer .tillStatic
 {
-	background: url("../img/swipe_static_trans.png") 0px 0px;
+	background: url("../img/swipe_static_solid.png") 0px 0px;
 	width: 630px;
 	height: 255px;
 }
 
-/******************************************************
+ /******************************************************
  * Slide 5
  **/
 
@@ -808,9 +638,9 @@
 	position: relative;
 	left: 0px;
 	top: 0px;
-	background: url("../img/nav_sprite.png") 0px -120px;
 	width: 630px;
 	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
 }
 .s5 .current.toAuthorization
 {
@@ -848,295 +678,309 @@
 }
 .s5 .copy
 {
-	position: relative;
-	height: 224px;
+	width: 630px;
+	height: 184px;
 }
-.s5 .copy .leadText
+.s5 .copy .authSteps
 {
 	position: relative;
-	padding-left: 20px;
-	height: 84px;
+	left: 0px;
+	top: 23px;
+	height: 168px;
+	width: 630px;
 }
-.s5 .copy .leadText .s5c0
+.s5 .copy .authSteps .authPath
 {
-	display: none;
+	position: relative;
+	left: 0px;
+	top: -26px;
+	background: url("../img/auth_path.png") 0px 0px;
+	height: 194px;
+	width: 610px;
+	z-index: 5;
+}
+.s5 .copy .authSteps .s5n1
+{
+	position: relative;
+	left: 18px;
+	top: -195px;
+	background: url("../img/auth_path.png")-18px -239px;
+	width: 72px;
+	height: 46px;
+	z-index: 10;
 	opacity: 0;
-}
-.s5 .copy .leadText .s5c1
-{
-	display: none;
-	opacity: 0;
-}
-.s5 .copy .leadText .s5c2
-{
-	display: none;
-	opacity: 0;
-}
-.s5 .copy .leadText .s5c3
-{
-	display: none;
-	opacity: 0;
-}
-.s5 .copy .bodyText
-{
-	position: relative;
-	padding-left: 20px;
-	height: 140px;
-}
-.s5 .copy .bodyText .s5b2l.s5c1
-{
-	position: relative;
-	display: none;
-	opacity: 0;
-	width: 315px;
-	line-height: 20px;
-	top: -12px;
-}
-.s5 .copy .bodyText .s5b2r.s5c1
-{
-	position: relative;
-	display: none;
-	opacity: 0;
-	width: 315px;
-	top: -36px;
-}
-.s5c1 .s5b2i1
-{
-	position: relative;
-	left: 296px;
-	top: -76px;
-	background: url("../img/auth_dec1.png") 0px 0px;
-	width: 202px;
-	height: 79px;
-}
-.s5c1 .s5b2it1
-{
-	position: relative;
-	left: 300px;
-	top: -72px;
-}
-.s5c1 .s5b2it2
-{
-	position: relative;
-	left: 416px;
-	top: -114px;
-}
-.s5c1 .s5b2i2
-{
-	position: relative;
-	left: 524px;
-	top: -224px;
-	background: url("../img/why.png") 0px 0px;
-	width: 86px;
-	height: 81px;
 	cursor: pointer;
 }
-.why
+.s5 .copy .authSteps .s5n2
 {
 	position: relative;
-	left: 279px;
-	top: -304px;
-	width: 300px;
-	height: 115px;
-	border: 2px solid #EFB42A;
-	border-radius: 48px;
-	z-index: 100;
-	background-color: #EFB42A;
-	display: none;
-	padding-left: 20px;
-	padding-top: 20px;
+	left: 161px;
+	top: -241px;
+	background: url("../img/auth_path.png")-161px -239px;
+	width: 72px;
+	height: 46px;
+	z-index: 10;
+	opacity: 0;
 	cursor: pointer;
 }
-.s5 .copy .bodyText .s5b3.s5c2
+.s5 .copy .authSteps .s5n3
 {
 	position: relative;
-	top: -12px;
-	display: none;
-	line-height: 20px;
+	left: 308px;
+	top: -287px;
+	background: url("../img/auth_path.png")-308px -239px;
+	width: 72px;
+	height: 46px;
+	z-index: 10;
 	opacity: 0;
+	cursor: pointer;
 }
-.s5 .copy .bodyText .s5b4.s5c3
+.s5 .copy .authSteps .s5n4
 {
 	position: relative;
-	top: -84px;
-	display: none;
-	line-height: 20px;
+	left: 451px;
+	top: -334px;
+	background: url("../img/auth_path.png")-451px -238px;
+	width: 72px;
+	height: 46px;
+	z-index: 10;
 	opacity: 0;
+	cursor: pointer;
 }
-.s5c3 .s5b4i1
+.s5 .copy .authSteps .s5n5
 {
 	position: relative;
-	left: 0px;
-	top: 6px;
-	display: inline-block;
-	background: url("../img/referral_icons.png") -20px 0px;
-	width: 80px;
-	height: 80px;
+	left: 448px;
+	top: -268px;
+	background: url("../img/auth_path.png")-448px -350px;
+	width: 72px;
+	height: 46px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
 }
-.s5c3 .s5b4it1
+.s5 .copy .authSteps .s5n6
 {
 	position: relative;
-	left: 0px;
-	top: -24px;
-	display: inline-block;
-	line-height: 16px;
+	left: 304px;
+	top: -314px;
+	background: url("../img/auth_path.png")-304px -350px;
+	width: 76px;
+	height: 46px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
 }
-.s5c3 .s5b4i2
+.s5 .copy .authSteps .s5n7
 {
 	position: relative;
-	left: 0px;
-	top: 4px;
-	display: inline-block;
-	background: url("../img/referral_icons.png") 84px 0px;
-	width: 80px;
-	height: 80px;
+	left: 166px;
+	top: -353px;
+	background: url("../img/auth_path.png")-166px -357px;
+	width: 36px;
+	height: 40px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
 }
-.s5c3 .s5b4it2
-{
-	position: relative;
-	left: 0px;
-	top: -10px;
-	display: inline-block;
-	line-height: 16px;
-}
-.s5c3 .s5b4i3
-{
-	position: relative;
-	left: 0px;
-	top: 4px;
-	display: inline-block;
-	background: url("../img/referral_icons.png") 286px 0px;
-	width: 80px;
-	height: 80px;
-}
-.s5c3 .s5b4it3
-{
-	position: relative;
-	left: 0px;
-	top: -44px;
-	display: inline-block;
-	line-height: 16px;
-}
-.s5 .copy .leadText .s5c0.animating
-{
-	display: block;
-}
-.s5 .copy .leadText .s5c1.animating
-{
-	display: block;
-}
-.s5 .copy .leadText .s5c2.animating
-{
-	display: block;
-}
-.s5 .copy .bodyText .s5b2l.s5c1.animating
-{
-	display: inline-block;
-}
-.s5 .copy .bodyText .s5b2r.s5c1.animating
-{
-	display: inline-block;
-}
-.s5 .copy .bodyText .s5b3.s5c2.animating
-{
-	display: block;
-}
-.s5 .copy .bodyText .s5b4.s5c3.animating
-{
-	display: block;
-}
-.s5 .footer
-{
-	position: relative;
-	left: 0px;
-	top: -40px;
-	z-index: -5;
-}
-.s5 .footer .tillDisplay
+.s5 .copy .stepsText
 {
 	position: relative;
 	left: 0px;
 	top: 0px;
+	padding-left: 60px;
+	z-index: 10;
 }
-.s5 .footer .tillStatus.s5c0
+.s5 .copy .stepsText .numberText.s5c1
 {
 	position: relative;
-	left: 34px;
-	top: -230px;
-	display: block;
+	left: -30px;
+	top: -92px;
+	display: none;
+	opacity: 0;
 }
-.s5 .footer .tillStatus.s5c1
+.s5 .copy .stepsText .numberText.s5c2
 {
 	position: relative;
-	left: 34px;
-	top: -230px;
+	left: -34px;
+	top: -92px;
 	display: none;
+	opacity: 0;
+
 }
-.s5 .footer .tillStatus.s5c2
+.s5 .copy .stepsText .numberText.s5c3
 {
 	position: relative;
-	left: 34px;
-	top: -230px;
+	left: -34px;
+	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s5 .footer .tillStatus.s5c3
+.s5 .copy .stepsText .numberText.s5c4
 {
 	position: relative;
-	left: 34px;
-	top: -230px;
+	left: -34px;
+	top: -92px;
 	display: none;
+	opacity: 0;
 }
-.s5 .footer .tillStatus.s5c0
-{
-	display: none;
-	background: url("../img/swipe_status.png") 0px 0px;
-}
-.s5 .footer .tillStatus.s5c1
-{
-	display: none;
-	background: url("../img/swipe_status.png") 0px -40px;
-}
-.s5 .footer .tillStatus.s5c2
-{
-	display: none;
-	background: url("../img/swipe_status.png") 0px -80px;
-}
-.s5 .footer .tillStatus.s5c3
-{
-	display: none;
-	background: url("../img/swipe_status.png") 0px -80px;
-}
-.s5 .footer .tillStatus.s5c0.animating
-{
-	display: block;
-	background: url("../img/swipe_status.png") 0px 0px;
-}
-.s5 .footer .tillStatus.s5c1.animating
-{
-	display: block;
-	background: url("../img/swipe_status.png") 0px -40px;
-}
-.s5 .footer .tillStatus.s5c2.animating
-{
-	display: block;
-	background: url("../img/swipe_status.png") 0px -80px;
-}
-.s5 .footer .tillStatus.s5c3.animating
-{
-	display: block;
-	background: url("../img/swipe_status.png") 0px -80px;
-}
-.s5 .footer .tillHand
+.s5 .copy .stepsText .numberText.s5c5
 {
 	position: relative;
-	left: 70px;
-	top: -262px;
+	left: -34px;
+	top: -92px;
+	display: none;
+	opacity: 0;
 }
-.s5 .footer .tillOuter
+.s5 .copy .stepsText .numberText.s5c6
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .numberText.s5c7
+{
+	position: relative;
+	left: -34px;
+	top: -92px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .bodyText
+{
+	padding-left: 20px;
+	z-index: 10;
+}
+.s5 .copy .stepsText .s5c0
 {
 	position: relative;
 	left: 0px;
-	top: -292px;
+	top: -94px;
+	display: none;
+}
+.s5 .copy .stepsText .bodyText.s5c1
+{
+	position: relative;
+	left: 0px;
+	top: -124px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .bodyText.s5c2
+{
+	position: relative;
+	left: 0px;
+	top: -124px;
+	display: none;
+	opacity: 0;	
+}
+.s5 .copy .stepsText .bodyText.s5c3
+{
+	position: relative;
+	left: 0px;
+	top: -124px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .bodyText.s5c4
+{
+	position: relative;
+	left: 0px;
+	top: -124px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .bodyText.s5c5
+{
+	position: relative;
+	left: 0px;
+	top: -110px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .bodyText.s5c6
+{
+	position: relative;
+	left: 0px;
+	top: -124px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .bodyText.s5c7 
+{
+	position: relative;
+	left: 0px;
+	top: -110px;
+	display: none;
+	opacity: 0;
+}
+.s5 .copy .stepsText .s5c0.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c1.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c2.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c3.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c4.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c5.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c6.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .bodyText.s5c7.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c1.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c2.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c3.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c4.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c5.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c6.animating
+{
+	display: block;
+}
+.s5 .copy .stepsText .numberText.s5c7.animating
+{
+	display: block;
+}
+.s5 .footer .tillStatic
+{
+	background: url("../img/swipe_static_trans.png") 0px 0px;
+	width: 630px;
+	height: 255px;
 }
 
 /******************************************************
@@ -1160,30 +1004,30 @@
 	position: relative;
 	left: 0px;
 	top: 0px;
+	background: url("../img/nav_sprite.png") 0px -120px;
 	width: 630px;
 	height: 60px;
-	background: url("../img/nav_sprite.png") 0px -120px;
 }
-.s6 .nav .toAuthorization
+.s6 .current.toAuthorization
 {
 	position: relative;
 	left: 326px;
 	top: 0px;
+	background: url("../img/nav_sprite.png") -326px -60px;
 	width: 120px;
 	height: 60px;
 	cursor: pointer;
 }
-.s6 .nav .current.toSettlement
+.s6 .toSettlement
 {
 	position: relative;
 	left: 446px;
 	top: -60px;
-	background: url("../img/nav_sprite.png") -446px -60px;
 	width: 98px;
 	height: 60px;
 	cursor: pointer;
 }
-.s6 .nav .toFunding
+.s6 .toFunding
 {
 	position: relative;
 	left: 544px;
@@ -1194,70 +1038,284 @@
 }
 .s6 .head
 {
-	background: url("../img/section_title.png") 0px -50px;	
+	background: url("../img/section_title.png") 0px 0px;	
 	width: 300px;
 	height: 50px;
 }
+.s6 .copy
+{
+	position: relative;
+	height: 224px;
+}
 .s6 .copy .leadText
 {
-	height: 80px;
+	position: relative;
 	padding-left: 20px;
+	height: 84px;
+}
+.s6 .copy .leadText .s6c0
+{
+	display: none;
+	opacity: 0;
+}
+.s6 .copy .leadText .s6c1
+{
+	display: none;
+	opacity: 0;
+}
+.s6 .copy .leadText .s6c2
+{
+	display: none;
+	opacity: 0;
+}
+.s6 .copy .leadText .s6c3
+{
+	display: none;
+	opacity: 0;
 }
 .s6 .copy .bodyText
 {
-	width: 630px;
+	position: relative;
 	padding-left: 20px;
+	height: 140px;
+}
+.s6 .copy .bodyText .s6b2l.s6c1
+{
+	position: relative;
+	display: none;
+	opacity: 0;
+	width: 315px;
+	line-height: 20px;
+	top: -12px;
+}
+.s6 .copy .bodyText .s6b2r.s6c1
+{
+	position: relative;
+	display: none;
+	opacity: 0;
+	width: 315px;
+	top: -36px;
+}
+.s6c1 .s6b2i1
+{
+	position: relative;
+	left: 296px;
+	top: -76px;
+	background: url("../img/auth_dec1.png") 0px 0px;
+	width: 202px;
+	height: 79px;
+}
+.s6c1 .s6b2it1
+{
+	position: relative;
+	left: 300px;
+	top: -72px;
+}
+.s6c1 .s6b2it2
+{
+	position: relative;
+	left: 416px;
+	top: -114px;
+}
+.s6c1 .s6b2i2
+{
+	position: relative;
+	left: 524px;
+	top: -224px;
+	background: url("../img/why.png") 0px 0px;
+	width: 86px;
+	height: 81px;
+	cursor: pointer;
+}
+.why
+{
+	position: relative;
+	left: 279px;
+	top: -322px;
+	width: 300px;
+	height: 134px;
+	border: 2px solid #EFD873;
+	border-radius: 48px;
+	z-index: 100;
+	background-color: #EFD873;
+	display: none;
+	padding-left: 20px;
+	padding-top: 14px;
+	line-height: 18px;
+	cursor: pointer;
+}
+.s6 .copy .bodyText .s6b3.s6c2
+{
+	position: relative;
+	top: -12px;
+	display: none;
+	line-height: 20px;
+	opacity: 0;
+}
+.s6 .copy .bodyText .s6b4.s6c3
+{
+	position: relative;
+	top: -84px;
+	display: none;
+	line-height: 20px;
+	opacity: 0;
+}
+.s6c3 .s6b4i1
+{
+	position: relative;
+	left: 0px;
+	top: 6px;
+	display: inline-block;
+	background: url("../img/referral_icons.png") -20px 0px;
+	width: 80px;
+	height: 80px;
+}
+.s6c3 .s6b4it1
+{
+	position: relative;
+	left: 0px;
+	top: -24px;
+	display: inline-block;
 	line-height: 16px;
 }
-.s6 .leadText.blueText
-{
-	padding-left: 0px;
-	font-size: 1em;
-}
-.s6 .copy .bodyText .s6i1
+.s6c3 .s6b4i2
 {
 	position: relative;
-	left: -20px;
-	top: 8px;
-	background: url("../img/sett_i1.png");
-	width: 363px;
-	height: 101px;
-	padding-left: 0px;
-	z-index: -5;
+	left: 0px;
+	top: 4px;
+	display: inline-block;
+	background: url("../img/referral_icons.png") 84px 0px;
+	width: 80px;
+	height: 80px;
 }
-.s6 .copy .bodyText .s6it1
+.s6c3 .s6b4it2
 {
 	position: relative;
-	left: 100px;
-	top: -88px;
+	left: 0px;
+	top: -10px;
+	display: inline-block;
+	line-height: 16px;
 }
-.s6 .copy .bodyText .s6it2
+.s6c3 .s6b4i3
 {
 	position: relative;
-	left: 346px;
-	top: -170px;
+	left: 0px;
+	top: 4px;
+	display: inline-block;
+	background: url("../img/referral_icons.png") 286px 0px;
+	width: 80px;
+	height: 80px;
+}
+.s6c3 .s6b4it3
+{
+	position: relative;
+	left: 0px;
+	top: -44px;
+	display: inline-block;
+	line-height: 16px;
+}
+.s6 .copy .leadText .s6c0.animating
+{
+	display: block;
+}
+.s6 .copy .leadText .s6c1.animating
+{
+	display: block;
+}
+.s6 .copy .leadText .s6c2.animating
+{
+	display: block;
+}
+.s6 .copy .bodyText .s6b2l.s6c1.animating
+{
+	display: inline-block;
+}
+.s6 .copy .bodyText .s6b2r.s6c1.animating
+{
+	display: inline-block;
+}
+.s6 .copy .bodyText .s6b3.s6c2.animating
+{
+	display: block;
+}
+.s6 .copy .bodyText .s6b4.s6c3.animating
+{
+	display: block;
 }
 .s6 .footer
 {
-	padding-top: 246px;
+	position: relative;
+	left: 0px;
+	top: -40px;
+	z-index: -5;
 }
-.s6 .footer .tillInner
+.s6 .footer .tillDisplay
 {
 	position: relative;
 	left: 0px;
 	top: 0px;
 }
+.s6 .footer .tillSwitch
+{
+	position: relative;
+	left: 34px;
+	top: -230px;
+	width: 208px;
+	height: 40px;
+	display: block;
+
+} 
+.s6 .footer .tillSwitch .tillStatus.s6c0
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px 0px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c1
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px -40px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c2
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c3
+{
+	display: none;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c0.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px 0px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c1.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px -40px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c2.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
+.s6 .footer .tillSwitch .tillStatus.s6c3.animating
+{
+	display: block;
+	background: url("../img/swipe_status.png") 0px -80px;
+}
 .s6 .footer .tillHand
 {
 	position: relative;
-	left: 360px;
-	top: -222px;
+	left: 70px;
+	top: -262px;
 }
 .s6 .footer .tillOuter
 {
 	position: relative;
 	left: 0px;
-	top: -252px;
+	top: -292px;
 }
 
 /******************************************************
@@ -1319,81 +1377,67 @@
 	width: 300px;
 	height: 50px;
 }
-.s7 .copy
-{
-	position: relative;
-	height: 381px;
-}
 .s7 .copy .leadText
 {
+	height: 80px;
 	padding-left: 20px;
 }
 .s7 .copy .bodyText
 {
-	padding-left: 20px;	
+	width: 630px;
+	padding-left: 20px;
+	line-height: 16px;
+}
+.s7 .leadText.blueText
+{
+	padding-left: 0px;
+	font-size: 1em;
 }
 .s7 .copy .bodyText .s7i1
 {
 	position: relative;
 	left: -20px;
-	top: 16px;
-	background: url("../img/sett_i2.png") 0px 0px;
-	width: 371px;
-	height: 108px;
-	display: inline-block;
+	top: 8px;
+	background: url("../img/sett_i1.png");
+	width: 363px;
+	height: 101px;
+	padding-left: 0px;
+	z-index: -5;
 }
-.s7 .copy .bodyText .s7t1
+.s7 .copy .bodyText .s7it1
 {
 	position: relative;
-	left: 351px;
-	top: -84px;
-	width: 259px;
-	height: 108px;
-	line-height: 18px;
+	left: 100px;
+	top: -88px;
 }
-.s7 .copy .bodyText .s7t2
+.s7 .copy .bodyText .s7it2
 {
 	position: relative;
-	top: -76px;
-}
-.s7 .copy .bodyText .s7i2
-{
-	position: relative;
-	left: -20px;
-	top: -64px;
-	background: url("../img/sett_i3.png") 0px 0px;
-	width: 630px;
-	height: 40px;
-}
-.s7 .copy .bodyText .s7t3
-{
-	position: relative;
-	left: 0px;
-	top: -42px;	
-}
-.s7 .copy .bodyText .s7t4
-{
-	position: relative;
-	left: 132px;
-	top: -84px;	
-}
-.s7 .copy .bodyText .s7t5
-{
-	position: relative;
-	left: 304px;
-	top: -112px;	
-}
-.s7 .copy .bodyText .s7t6
-{
-	position: relative;
-	left: 476px;
-	top: -154px;	
+	left: 346px;
+	top: -170px;
 }
 .s7 .footer
 {
+	padding-top: 246px;
+	overflow: hidden;
+}
+.s7 .footer .tillInner
+{
 	position: relative;
 	left: 0px;
-	height: 58px;
+	top: 0px;
+}
+.s7 .footer .tillHand
+{
+	position: relative;
+	left: 360px;
+	top: -222px;
+}
+.s7 .footer .tillOuter
+{
+	position: relative;
+	left: 0px;
+	top: -252px;
 }
 
 /******************************************************
@@ -1458,7 +1502,7 @@
 .s8 .copy
 {
 	position: relative;
-	height: 272px;
+	height: 381px;
 }
 .s8 .copy .leadText
 {
@@ -1466,228 +1510,145 @@
 }
 .s8 .copy .bodyText
 {
-	line-height: 18px;
-	z-index: 5;
+	padding-left: 20px;	
 }
-.s8 .copy .bodyText .settTrack
-{
-	position: relative;
-	width: 630px;
-	height: 180px;
-}
-.s8 .copy .bodyText .settTrack .settPath
+.s8 .copy .bodyText .s8sprite .s8track
 {
 	position: relative;
 	left: 0px;
-	top: 0px;
-	background: url("../img/sett_i4.png") 0px 0px;
-	width: 630px;
-	height: 180px;
+	top: 16px;
+	background: url("../img/settlement_row_sprite.png") 0px 0px;
+	width: 590px;
+	height: 130px;
 	z-index: -5;
+	display: inline-block;
 }
-.s8 .copy .bodyText .settTrack .s8n0
+.s8 .copy .bodyText .s8sprite .s8n0
 {
 	position: relative;
-	left: 74px;
-	top: -168px;
-	background: url("../img/sett_i4.png")-74px -192px;
-	width: 44px;
-	height: 44px;
-	z-index: 5;
-	opacity: 0;
-	cursor: pointer;
-}
-.s8 .copy .bodyText .settTrack .s8n1
-{
-	position: relative;
-	left: 180px;
-	top: -100px;
-	background: url("../img/sett_i4.png")-180px -304px;
-	width: 44px;
-	height: 44px;
-	z-index: 5;
-	opacity: 0;
-	cursor: pointer;
-}
-.s8 .copy .bodyText .settTrack .s8n2
-{
-	position: relative;
-	left: 292px;
-	top: -254px;
-	background: url("../img/sett_i4.png")-292px -193px;
-	width: 44px;
-	height: 44px;
-	z-index: 5;
-	opacity: 0;
-	cursor: pointer;
-}
-.s8 .copy .bodyText .settTrack .s8n3
-{
-	position: relative;
-	left: 402px;
-	top: -188px;
-	background: url("../img/sett_i4.png")-402px -304px;
-	width: 44px;
-	height: 44px;
-	z-index: 5;
-	opacity: 0;
-	cursor: pointer;
-}
-.s8 .copy .bodyText .settTrack .s8n4
-{
-	position: relative;
-	left: 512px;
-	top: -342px;
-	background: url("../img/sett_i4.png")-512px -194px;
-	width: 44px;
-	height: 44px;
+	left: 20px;
+	top: -89px;
+	background: url("../img/settlement_row_sprite.png") 570px 102px;
+	width: 72px;
+	height: 72px;
 	z-index: 5;	
 	opacity: 0;
+	cursor: pointer;	
+}
+.s8 .copy .bodyText .s8sprite .s8n1
+{
+	position: absolute;
+	left: 201px;
+	top: 118px;
+	background: url("../img/settlement_row_sprite.png") 409px -158px;
+	width: 72px;
+	height: 72px;
+	z-index: 5;	
+	opacity: 0;	
 	cursor: pointer;
+}
+.s8 .copy .bodyText .s8sprite .s8n2
+{
+	position: absolute;
+	left: 360px;
+	top: 119px;
+	background: url("../img/settlement_row_sprite.png") 250px -159px;
+	width: 72px;
+	height: 72px;
+	z-index: 5;	
+	opacity: 0;	
+	cursor: pointer;
+}
+.s8 .copy .bodyText .s8sprite .s8n3
+{
+	position: absolute;
+	left: 519px;
+	top: 120px;
+	background: url("../img/settlement_row_sprite.png") 91px -160px;
+	width: 72px;
+	height: 72px;
+	z-index: 5;	
+	opacity: 0;	
+	cursor: pointer;
+}
+.s8c0
+{
+	position: relative;
+	top: -72px;
+}
+.s8c1
+{
+	position: relative;
+	top: -72px;
+}
+.s8c2
+{
+	position: relative;
+	top: -72px;
+}
+.s8c3
+{
+	position: relative;
+	top: -72px;
+}
+.s8 .copy .bodyText .s8t1
+{
+	position: relative;
+	left: 351px;
+	top: -164px;
+	width: 259px;
+	height: 108px;
+	line-height: 18px;
+}
+.s8 .copy .bodyText .s8t2
+{
+	position: relative;
+	top: 22px;
+}
+.s8 .copy .bodyText .s8i2
+{
+	position: relative;
+	left: -20px;
+	top: -64px;
+	background: url("../img/sett_i3.png") 0px 0px;
+	width: 630px;
+	height: 40px;
+}
+.s8 .copy .bodyText .s8info
+{
+	position: relative;
+	left: 20px;
+	line-height: 18px;
 }
 .s8 .copy .bodyText .s8c0
 {
-	position: relative;
-	left: 92px;
-	top: 8px;
-	width: 500px;
-	height: 180px;
 	display: none;
 }
 .s8 .copy .bodyText .s8c1
 {
-	position: relative;
-	left: 92px;
-	top: 8px;
-	width: 500px;
-	height: 180px;
 	display: none;
 }
 .s8 .copy .bodyText .s8c2
 {
-	position: relative;
-	left: 92px;
-	top: -10px;
-	width: 500px;
-	height: 180px;
 	display: none;
-
 }
 .s8 .copy .bodyText .s8c3
 {
-	position: relative;
-	left: 92px;
-	top: 8px;
-	width: 500px;
-	height: 180px;
 	display: none;
-}
-.s8 .copy .bodyText .s8c4
-{
-	position: relative;
-	left: 92px;
-	top: 8px;
-	width: 500px;
-	height: 180px;
-	display: none;
-}
-.s8 .copy .bodyText .s8c0.no1
-{
-	position: relative;
-	left: 92px;
-	top: -12px;
-	width: 40px;
-	display: none;
-}
-.s8 .copy .bodyText .s8c1.no2
-{
-	position: relative;
-	left: 92px;
-	top: -12px;
-	width: 40px;
-	display: none;
-}
-.s8 .copy .bodyText .s8c2.no3
-{
-	position: relative;
-	left: 92px;
-	top: -66px;
-	width: 40px;
-	display: none;
-}
-.s8 .copy .bodyText .s8c3.no4
-{
-	position: relative;
-	left: 92px;
-	top: -12px;
-	width: 40px;
-	display: none;
-}
-.s8 .copy .bodyText .s8c4.no5
-{
-	position: relative;
-	left: 92px;
-	top: 6px;
-	width: 40px;
-	display: none;
-}
-.s8 .copy .bodyText .no1.animating
-{
-	display: inline-block;
-}
-.s8 .copy .bodyText .no2.animating
-{
-	display: inline-block;
-}
-.s8 .copy .bodyText .no3.animating
-{
-	display: inline-block;
-}
-.s8 .copy .bodyText .no4.animating
-{
-	display: inline-block;
-}
-.s8 .copy .bodyText .no5.animating
-{
-	display: inline-block;
 }
 .s8 .copy .bodyText .s8c0.animating
 {
-	display: inline-block;
+	display: block;
 }
 .s8 .copy .bodyText .s8c1.animating
 {
-	display: inline-block;
+	display: block;
 }
 .s8 .copy .bodyText .s8c2.animating
 {
-	display: inline-block;
+	display: block;
 }
 .s8 .copy .bodyText .s8c3.animating
-{
-	display: inline-block;
-}
-.s8 .copy .bodyText .s8c4.animating
-{
-	display: inline-block;
-}
-.s8 .copy .bodyText .settTrack .s8n0.animating
-{
-	display: block;
-}
-.s8 .copy .bodyText .settTrack .s8n1.animating
-{
-	display: block;
-}
-.s8 .copy .bodyText .settTrack .s8n2.animating
-{
-	display: block;
-}
-.s8 .copy .bodyText .settTrack .s8n3.animating
-{
-	display: block;
-}
-.s8 .copy .bodyText .settTrack .s8n4.animating
 {
 	display: block;
 }
@@ -1695,8 +1656,7 @@
 {
 	position: relative;
 	left: 0px;
-	top: 0px;
-	z-index: -5;
+	height: 58px;
 }
 
 /******************************************************
@@ -1733,7 +1693,310 @@
 	height: 60px;
 	cursor: pointer;
 }
-.s9 .nav .toSettlement
+.s9 .nav .current.toSettlement
+{
+	position: relative;
+	left: 446px;
+	top: -60px;
+	background: url("../img/nav_sprite.png") -446px -60px;
+	width: 98px;
+	height: 60px;
+	cursor: pointer;
+}
+.s9 .nav .toFunding
+{
+	position: relative;
+	left: 544px;
+	top: -120px;
+	width: 72px;
+	height: 60px;
+	cursor: pointer;
+}
+.s9 .head
+{
+	background: url("../img/section_title.png") 0px -50px;	
+	width: 300px;
+	height: 50px;
+}
+.s9 .copy
+{
+	position: relative;
+	height: 272px;
+}
+.s9 .copy .leadText
+{
+	padding-left: 20px;
+}
+.s9 .copy .bodyText
+{
+	line-height: 18px;
+	z-index: 5;
+}
+.s9 .copy .bodyText .settTrack
+{
+	position: relative;
+	width: 630px;
+	height: 180px;
+}
+.s9 .copy .bodyText .settTrack .settPath
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background: url("../img/sett_i4.png") 0px 0px;
+	width: 630px;
+	height: 180px;
+	z-index: -5;
+}
+.s9 .copy .bodyText .settTrack .s9n0
+{
+	position: relative;
+	left: 74px;
+	top: -168px;
+	background: url("../img/sett_i4.png")-74px -192px;
+	width: 44px;
+	height: 44px;
+	z-index: 5;
+	opacity: 0;
+	cursor: pointer;
+}
+.s9 .copy .bodyText .settTrack .s9n1
+{
+	position: relative;
+	left: 180px;
+	top: -100px;
+	background: url("../img/sett_i4.png")-180px -304px;
+	width: 44px;
+	height: 44px;
+	z-index: 5;
+	opacity: 0;
+	cursor: pointer;
+}
+.s9 .copy .bodyText .settTrack .s9n2
+{
+	position: relative;
+	left: 292px;
+	top: -254px;
+	background: url("../img/sett_i4.png")-292px -193px;
+	width: 44px;
+	height: 44px;
+	z-index: 5;
+	opacity: 0;
+	cursor: pointer;
+}
+.s9 .copy .bodyText .settTrack .s9n3
+{
+	position: relative;
+	left: 402px;
+	top: -188px;
+	background: url("../img/sett_i4.png")-402px -304px;
+	width: 44px;
+	height: 44px;
+	z-index: 5;
+	opacity: 0;
+	cursor: pointer;
+}
+.s9 .copy .bodyText .settTrack .s9n4
+{
+	position: relative;
+	left: 512px;
+	top: -342px;
+	background: url("../img/sett_i4.png")-512px -194px;
+	width: 44px;
+	height: 44px;
+	z-index: 5;	
+	opacity: 0;
+	cursor: pointer;
+}
+.s9 .copy .bodyText .s9c0
+{
+	position: relative;
+	left: 92px;
+	top: 8px;
+	width: 500px;
+	height: 180px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c1
+{
+	position: relative;
+	left: 92px;
+	top: 8px;
+	width: 500px;
+	height: 180px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c2
+{
+	position: relative;
+	left: 92px;
+	top: -10px;
+	width: 500px;
+	height: 180px;
+	display: none;
+
+}
+.s9 .copy .bodyText .s9c3
+{
+	position: relative;
+	left: 92px;
+	top: 8px;
+	width: 500px;
+	height: 180px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c4
+{
+	position: relative;
+	left: 92px;
+	top: 8px;
+	width: 500px;
+	height: 180px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c0.no1
+{
+	position: relative;
+	left: 92px;
+	top: -12px;
+	width: 40px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c1.no2
+{
+	position: relative;
+	left: 92px;
+	top: -12px;
+	width: 40px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c2.no3
+{
+	position: relative;
+	left: 92px;
+	top: -66px;
+	width: 40px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c3.no4
+{
+	position: relative;
+	left: 92px;
+	top: -12px;
+	width: 40px;
+	display: none;
+}
+.s9 .copy .bodyText .s9c4.no5
+{
+	position: relative;
+	left: 92px;
+	top: 6px;
+	width: 40px;
+	display: none;
+}
+.s9 .copy .bodyText .no1.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .no2.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .no3.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .no4.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .no5.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .s9c0.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .s9c1.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .s9c2.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .s9c3.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .s9c4.animating
+{
+	display: inline-block;
+}
+.s9 .copy .bodyText .settTrack .s9n0.animating
+{
+	display: block;
+}
+.s9 .copy .bodyText .settTrack .s9n1.animating
+{
+	display: block;
+}
+.s9 .copy .bodyText .settTrack .s9n2.animating
+{
+	display: block;
+}
+.s9 .copy .bodyText .settTrack .s9n3.animating
+{
+	display: block;
+}
+.s9 .copy .bodyText .settTrack .s9n4.animating
+{
+	display: block;
+}
+.s9 .footer
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	z-index: -5;
+}
+
+/******************************************************
+ * Slide 10
+ **/
+
+.s10
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+.s10.active
+{
+	opacity: 0;
+	display: block;
+}
+.s10 .nav
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 630px;
+	height: 60px;
+	background: url("../img/nav_sprite.png") 0px -120px;
+}
+.s10 .nav .toAuthorization
+{
+	position: relative;
+	left: 326px;
+	top: 0px;
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
+.s10 .nav .toSettlement
 {
 	position: relative;
 	left: 446px;
@@ -1742,7 +2005,7 @@
 	height: 60px;
 	cursor: pointer;
 }
-.s9 .nav .current.toFunding
+.s10 .nav .current.toFunding
 {
 	position: relative;
 	left: 544px;
@@ -1752,28 +2015,28 @@
 	height: 60px;
 	cursor: pointer;
 }
-.s9 .head
+.s10 .head
 {
 	background: url("../img/section_title.png") 0px -100px;	
 	width: 300px;
 	height: 50px;
 }
-.s9 .copy
+.s10 .copy
 {
 	position: relative;
 	height: 381px;
 }
-.s9 .copy .leadText
+.s10 .copy .leadText
 {
 	padding-left: 20px;
 	height: 80px;
 }
-.s9 .copy .bodyText
+.s10 .copy .bodyText
 {
 	padding-left: 20px;
 	line-height: 1.5em;
 }
-.s9 .footer
+.s10 .footer
 {
 	position: relative;
 	left: 0px;

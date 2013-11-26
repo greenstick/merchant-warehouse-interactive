@@ -14,9 +14,9 @@
 		currentSlide = 1,
 		url = '.s1', //Inital slide
 		time = 1000, //Delay between animation selections
-		removeLast = ['.s4c8', '.s5c4', '.s8c4'], //Define last animated element of subslides +1
-		removeFirst = ['.s4c-1', '.s5c-1', '.s8c-1'], //Define first animated element of subslide -1
-		subArray = [4, 5, 8], //Define subslides
+		removeLast = ['.s4c5', '.s5c8', '.s6c4', '.s8c4', '.s9c5'], //Define last animated element of subslides +1
+		removeFirst = ['.s4c-1', '.s5c-1', '.s6c-1', '.s8c-1', '.s9c-1'], //Define first animated element of subslide -1
+		subArray = [4, 5, 6, 8, 9], //Define subslides
 		animQueue = false,
 		subSlide = false, 
 		currentEle = null,
@@ -29,7 +29,7 @@
 //Loading initial settings & unbinding scroll event from window
 		$('.noJS').hide();
 		mobileDetect();
-		promptUser();
+		promptUserArrow();
 //Direct slide navigation functions
 		$('.toAuthorization').on('click', function()
 		{
@@ -76,13 +76,14 @@
 			}
 		});
 //Tooltip function
-		$('.s5b2i2').on('click', function()
+		$('.s6b2i2').on('click', function()
 		{
 			$('.why').fadeIn(600);
 		});
 		$('.why').on('click', function()
 		{
 			$(this).fadeOut(600);
+			$('.s6b2i2').animate({'opacity': 1}, 0);
 		});
 		$(document).ready(function()
 		{
@@ -104,7 +105,7 @@
 			{
 				window.addEventListener("touchstart", touchStart, false);
 				window.addEventListener("touchmove", touchMove, false);
-			}
+			};
 			var start = {x: 0, y: 0};
 			function touchStart(e)
 			{
@@ -123,7 +124,7 @@
 						event.preventDefault ? event.preventDefault() : event.returnValue = false;
 						handle(delta);
 					});
-				}
+				};
 			}
 		}
 //Binds scroll function on scroll to interactive element on mouse & trackpad devices
@@ -140,14 +141,14 @@
 				else if (event.originalEvent.detail)
 				{
 					delta = -event.originalEvent.detail / 3;
-				}
+				};
 				if (delta)
 				{
 					handle(delta);
 					event.preventDefault ? event.preventDefault() : event.returnValue = false;
-				}
+				};
 			});
-		}
+		};
 	}
 //Directs navigation function calls via wheel delta event
 	function handle(delta)
@@ -156,7 +157,8 @@
 		{
 			currentlyScrolling = true;
 			checkSlide();
-			promptUser();
+			promptUserArrow();
+			promptUserWhy();
 //Not subslide
 			if(subSlide === false)
 			{
@@ -188,7 +190,7 @@
 			{
 				(delta < 0) ? nextElement() : previousElement();
 				setTimeout(animComplete, time);
-			}
+			};
 		}
 	}
 
@@ -199,16 +201,17 @@
 //Scroll initiated navigation
 	function navigateSlides(loc, delay)
 	{
-		if(url === '.s4' || url === '.s5' || url === '.s8')
+		if(url === '.s4' || url === '.s5' || url === '.s6' || url === '.s8' || url === '.s9')
 		{
 			animEle = url +'c0';
 			$(animEle).animate({'opacity': 1}).addClass('animating');
-			if(url === '.s8')
+			//Animates node if node should be animated on fadeIn
+			if(url === '.s8' || '.s9')
 			{
 				animNode = url + 'n0';
 				$(animNode).animate({'opacity': 1}).addClass('animating');
 			}
-		}
+		};
 		$(url)
 			.addClass('active')
 			.animate({'opacity': 1}, 400, 'linear')
@@ -280,7 +283,7 @@
 							next();
 						})
 					.dequeue();
-		}
+		};
 	}
 //Previous subslide element
 	function previousElement()
@@ -314,7 +317,7 @@
 							next();
 						})
 					.dequeue();
-		}
+		};
 	}
 
 /******************************************************************
@@ -341,7 +344,7 @@
 						})
 					.dequeue();
 			setTimeout(animComplete, time);
-		}
+		};
 	}
 	function toSettlement()
 	{
@@ -349,8 +352,8 @@
 		{
 			animQueue = true;
 			$(url).animate({'opacity': 0}, 400, 'linear');
-			url = '.s6';
-			currentSlide = 6;
+			url = '.s7';
+			currentSlide = 7;
 			$(url)
 				.addClass('active')
 				.animate({'opacity': 1}, 400, 'linear')
@@ -362,7 +365,7 @@
 						})
 					.dequeue();
 			setTimeout(animComplete, time);
-		}
+		};
 	}
 	function toFunding()
 	{
@@ -370,8 +373,8 @@
 		{
 			animQueue = true;
 			$(url).animate({'opacity': 0}, 400, 'linear');
-			url = '.s9';
-			currentSlide = 9;
+			url = '.s10';
+			currentSlide = 10;
 			$(url)
 				.addClass('active')
 				.animate({'opacity': 1}, 400, 'linear')
@@ -408,7 +411,7 @@
 						})
 					.dequeue();
 			setTimeout(animComplete, time);
-		}
+		};
 	}
 
 /******************************************************************
@@ -416,23 +419,23 @@
 ******************************************************************/
 
 //Implement indexOf function for IE
-if (!Array.prototype.indexOf) {
-	Array.prototype.indexOf = function(obj, start) {
-	     for (var i = (start || 0), j = this.length; i < j; i++) {
-	         if (this[i] === obj) { return i; }
-	     }
-	     return -1;
-	}
-}
+	if (!Array.prototype.indexOf) {
+		Array.prototype.indexOf = function(obj, start) {
+		     for (var i = (start || 0), j = this.length; i < j; i++) {
+		         if (this[i] === obj) { return i; }
+		     };
+		     return -1;
+		};
+	};
 //Check whether user is mobile - feature detection is preferable to this
 	function mobileDetect()
 	{
 		(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) ? isMobile = true : isMobile = false;
-	};
+	}
 //Controls arrow to prompt user scroll
-	function promptUser()
+	function promptUserArrow()
 	{
-		if(currentSlide === 1)
+		if(url === '.s1')
 		{
 			setTimeout(arrowAnimate, 4800);
 		}
@@ -440,24 +443,53 @@ if (!Array.prototype.indexOf) {
 		{
 			clearTimeout(arrowAnimate);
 			$('.arrow').animate({'opacity': 0});
+			return;
 		};
 //Animates arrow on slide 1
 		function arrowAnimate()
 		{
-			$('.arrow').animate({'opacity': 1}, 1000, 'linear');
-			$('.arrow').fadeIn(1000).delay(200).fadeOut(1000, function()
+			if(url === '.s1')
 			{
-				if(currentSlide === 1)
+				$('.arrow').animate({'opacity': 1}, 1000, 'linear');
+				$('.arrow').fadeIn(1000).delay(200).fadeOut(1000, function()
 				{
 					arrowAnimate();
-				}
-				else
-				{
-					return
-				}
-			});
+				});
+			}
+			else return;
+		}
+	}
+	function promptUserWhy()
+	{
+		var clicked = false;
+		$('.s6b2i2').on('click', function()
+		{
+			$('.s6b2i2').animate({'opacity': 0}, 600);
+			clicked = true;
+			return;
+		});
+		if(url === '.s6')
+		{
+			setTimeout(whyAnimate, 4800);
+		}
+		else
+		{
+			clearTimeout(whyAnimate);
+			$('.s6b2i2').animate({'opacity': 1});
+			return;
 		};
-	};
+		function whyAnimate()
+		{
+			if(url === '.s6' && clicked !== true)
+			{
+				$('.s6b2i2').animate({'opacity': 0}, 1000).delay(200).animate({'opacity': 1}, 1000, function()
+				{
+					whyAnimate();
+				});
+			}
+			else return;
+		}
+	}
 //Checks to see if value is in array
 	function valueExists(value, array)
 	{
@@ -483,18 +515,18 @@ if (!Array.prototype.indexOf) {
 			{
 				subSlide = true;
 				break;
-			}
-		}
+			};
+		};
 	}
 //Maintains accurate slide index on show recycle
 	function checkPosition()
 	{
 		if (currentSlide === 0)
 		{
-			currentSlide = 9;
-			url = '.s9';
+			currentSlide = 10;
+			url = '.s10';
 		}
-		else if (currentSlide === 10)
+		else if (currentSlide === 11)
 		{
 			currentSlide = 1;
 			url = '.s1'
@@ -502,8 +534,8 @@ if (!Array.prototype.indexOf) {
 		else 
 		{
 			currentSlide = currentSlide;
-		}
-	};
+		};
+	}
 //Clears the active class from each inactive slide
 	function checkActive()
 	{
@@ -513,7 +545,7 @@ if (!Array.prototype.indexOf) {
 				.not(url)
 				.removeClass('active')
 				.animate({'opacity': 0});
-		})
+		});
 	}
 //Clears the animating class from each inactive animation element
 	function checkAnimating()
@@ -527,7 +559,7 @@ if (!Array.prototype.indexOf) {
 						.removeClass('animating')
 						.animate({'opacity': 0}, 600, 'linear');
 				}
-			})
+			});
 	}
 //Animation reset function
 	function animComplete()
