@@ -14,9 +14,9 @@
 		currentSlide = 1,
 		url = '.s1', //Inital slide
 		time = 1000, //Delay between animation selections
-		removeLast = ['.s4c5', '.s5c8', '.s6c4', '.s8c4', '.s9c5'], //Define last animated element of subslides +1
-		removeFirst = ['.s4c-1', '.s5c-1', '.s6c-1', '.s8c-1', '.s9c-1'], //Define first animated element of subslide -1
-		subArray = [4, 5, 6, 8, 9], //Define subslides
+		removeLast = ['.s3c5', '.s5c8', '.s6c4', '.s8c4', '.s9c5'], //Define last animated element of subslides +1
+		removeFirst = ['.s3c-1', '.s5c-1', '.s6c-1', '.s8c-1', '.s9c-1'], //Define first animated element of subslide -1
+		subArray = [3, 5, 6, 8, 9], //Define subslides
 		animQueue = false,
 		subSlide = false, 
 		currentEle = null,
@@ -201,7 +201,7 @@
 //Scroll initiated navigation
 	function navigateSlides(loc, delay)
 	{
-		if(url === '.s4' || url === '.s5' || url === '.s6' || url === '.s8' || url === '.s9')
+		if(url === '.s3' || url === '.s5' || url === '.s6' || url === '.s8' || url === '.s9')
 		{
 			animEle = url +'c0';
 			$(animEle).animate({'opacity': 1}).addClass('animating');
@@ -331,8 +331,8 @@
 		{
 			animQueue = true;
 			$(url).animate({'opacity': 0}, 400, 'linear');
-			url = '.s3';
-			currentSlide = 3;
+			url = '.s4';
+			currentSlide = 4;
 			$(url)
 				.addClass('active')
 				.animate({'opacity': 1}, 400, 'linear')

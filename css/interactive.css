@@ -39,6 +39,7 @@
 	position: relative;
 	width: 630px;
 	height: 550px;
+	overflow: hidden;
 }
 .bg
 {
@@ -238,7 +239,7 @@
 }
 .s1 .title .span2
 {
-	font-size: 3.0em;
+	font-size: 2.6em;
 	text-align: center;
 }
 .s1 .leadText
@@ -366,39 +367,11 @@
 	top: 0px;
 	width: 630px;
 	height: 60px;
-	background: url("../img/nav_sprite.png") 0px -120px;
-}
-.s3 .current.toAuthorization
-{
-	position: relative;
-	left: 326px;
-	top: 0px;
-	background: url("../img/nav_sprite.png") -326px -60px;
-	width: 120px;
-	height: 60px;
-	cursor: pointer;
-}
-.s3 .toSettlement
-{
-	position: relative;
-	left: 446px;
-	top: -60px;
-	width: 98px;
-	height: 60px;
-	cursor: pointer;
-}
-.s3 .toFunding
-{
-	position: relative;
-	left: 544px;
-	top: -120px;
-	width: 72px;
-	height: 60px;
-	cursor: pointer;
+	background: url("../img/nav_sprite.png") 0px 0px;
 }
 .s3 .head
 {
-	background: url("../img/section_title.png") 0px 0px;	
+	background: url("../img/key_players.png") 0px 0px;	
 	width: 300px;
 	height: 50px;
 }
@@ -406,6 +379,130 @@
 {
 	width: 630px;
 	height: 184px;
+}
+.s3 .copy .introSteps
+{
+
+}
+.s3 .copy .introSteps .introPath
+{
+	position: relative;
+	left: 18px;
+	top: 0px;
+	background: url("../img/author_icons_sprite.png") 0px 0px;
+	width: 560px;
+	height: 112px;
+	z-index: 10;
+}
+.s3 .copy .introSteps .s3n0
+{
+	position: relative;
+	left: 24px;
+	top: -107px;
+	background: url("../img/author_icons_sprite.png") -6px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s3 .copy .introSteps .s3n1
+{
+	position: relative;
+	left: 135px;
+	top: -207px;
+	background: url("../img/author_icons_sprite.png") 444px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;	
+}
+.s3 .copy .introSteps .s3n2
+{
+	position: relative;
+	left: 246px;
+	top: -307px;
+	background: url("../img/author_icons_sprite.png") 891px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s3 .copy .introSteps .s3n3
+{
+	position: relative;
+	left: 358px;
+	top: -407px;
+	background: url("../img/author_icons_sprite.png") 1339px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.s3 .copy .introSteps .s3n4
+{
+	position: relative;
+	left: 470px;
+	top: -507px;
+	background: url("../img/author_icons_sprite.png") 1787px -117px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+.stepsText
+{
+	position: relative;
+	left: 0px;
+	top: -496px;
+}
+.s3 .copy .stepsText .bodyText
+{
+	padding-left: 20px;
+}
+.s3 .copy .stepsText .s3c0
+{
+	display: none;
+}
+.s3 .copy .stepsText .s3c1
+{
+	display: none;
+}
+.s3 .copy .stepsText .s3c2
+{
+	display: none;
+}
+.s3 .copy .stepsText .s3c3
+{
+	display: none;
+}
+.s3 .copy .stepsText .s3c4
+{
+	display: none;
+}
+.s3 .copy .stepsText .s3c0.animating
+{
+	display: block;
+}
+.s3 .copy .stepsText .s3c1.animating
+{
+	display: block;
+}
+.s3 .copy .stepsText .s3c2.animating
+{
+	display: block;
+}
+.s3 .copy .stepsText .s3c3.animating
+{
+	display: block;
+}
+.s3 .copy .stepsText .s3c4.animating
+{
+	display: block;
 }
 .s3 .copy .leadText
 {
@@ -481,130 +578,6 @@
 {
 	width: 630px;
 	height: 184px;
-}
-.s4 .copy .introSteps
-{
-
-}
-.s4 .copy .introSteps .introPath
-{
-	position: relative;
-	left: 18px;
-	top: 0px;
-	background: url("../img/author_icons_sprite.png") 0px 0px;
-	width: 560px;
-	height: 112px;
-	z-index: 10;
-}
-.s4 .copy .introSteps .s4n0
-{
-	position: relative;
-	left: 24px;
-	top: -107px;
-	background: url("../img/author_icons_sprite.png") -6px -117px;
-	width: 100px;
-	height: 100px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .introSteps .s4n1
-{
-	position: relative;
-	left: 135px;
-	top: -207px;
-	background: url("../img/author_icons_sprite.png") 444px -117px;
-	width: 100px;
-	height: 100px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;	
-}
-.s4 .copy .introSteps .s4n2
-{
-	position: relative;
-	left: 246px;
-	top: -307px;
-	background: url("../img/author_icons_sprite.png") 891px -117px;
-	width: 100px;
-	height: 100px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .introSteps .s4n3
-{
-	position: relative;
-	left: 358px;
-	top: -407px;
-	background: url("../img/author_icons_sprite.png") 1339px -117px;
-	width: 100px;
-	height: 100px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.s4 .copy .introSteps .s4n4
-{
-	position: relative;
-	left: 470px;
-	top: -507px;
-	background: url("../img/author_icons_sprite.png") 1787px -117px;
-	width: 100px;
-	height: 100px;
-	z-index: 10;
-	opacity: 0;
-	cursor: pointer;
-}
-.stepsText
-{
-	position: relative;
-	left: 0px;
-	top: -496px;
-}
-.s4 .copy .stepsText .bodyText
-{
-	padding-left: 20px;
-}
-.s4 .copy .stepsText .s4c0
-{
-	display: none;
-}
-.s4 .copy .stepsText .s4c1
-{
-	display: none;
-}
-.s4 .copy .stepsText .s4c2
-{
-	display: none;
-}
-.s4 .copy .stepsText .s4c3
-{
-	display: none;
-}
-.s4 .copy .stepsText .s4c4
-{
-	display: none;
-}
-.s4 .copy .stepsText .s4c0.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .s4c1.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .s4c2.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .s4c3.animating
-{
-	display: block;
-}
-.s4 .copy .stepsText .s4c4.animating
-{
-	display: block;
 }
 .s4 .copy .leadText
 {
@@ -1419,7 +1392,6 @@
 .s7 .footer
 {
 	padding-top: 246px;
-	overflow: hidden;
 }
 .s7 .footer .tillInner
 {
@@ -1741,19 +1713,19 @@
 .s9 .copy .bodyText .settTrack .settPath
 {
 	position: relative;
-	left: 0px;
+	left: 35px;
 	top: 0px;
-	background: url("../img/sett_i4.png") 0px 0px;
-	width: 630px;
+	background: url("../img/sett_i4.png") 0px -227px;
+	width: 560px;
 	height: 180px;
 	z-index: -5;
 }
 .s9 .copy .bodyText .settTrack .s9n0
 {
 	position: relative;
-	left: 74px;
-	top: -168px;
-	background: url("../img/sett_i4.png")-74px -192px;
+	left: 67px;
+	top: -152px;
+	background: url("../img/sett_i4.png")-32px -41px;
 	width: 44px;
 	height: 44px;
 	z-index: 5;
@@ -1763,11 +1735,11 @@
 .s9 .copy .bodyText .settTrack .s9n1
 {
 	position: relative;
-	left: 180px;
-	top: -100px;
-	background: url("../img/sett_i4.png")-180px -304px;
-	width: 44px;
-	height: 44px;
+	left: 159px;
+	top: -88px;
+	background: url("../img/sett_i4.png")-124px -149px;
+	width: 84px;
+	height: 67px;
 	z-index: 5;
 	opacity: 0;
 	cursor: pointer;
@@ -1775,11 +1747,11 @@
 .s9 .copy .bodyText .settTrack .s9n2
 {
 	position: relative;
-	left: 292px;
-	top: -254px;
-	background: url("../img/sett_i4.png")-292px -193px;
-	width: 44px;
-	height: 44px;
+	left: 266px;
+	top: -285px;
+	background: url("../img/sett_i4.png")-231px -20px;
+	width: 84px;
+	height: 67px;
 	z-index: 5;
 	opacity: 0;
 	cursor: pointer;
@@ -1787,11 +1759,11 @@
 .s9 .copy .bodyText .settTrack .s9n3
 {
 	position: relative;
-	left: 402px;
-	top: -188px;
-	background: url("../img/sett_i4.png")-402px -304px;
-	width: 44px;
-	height: 44px;
+	left: 379px;
+	top: -222px;
+	background: url("../img/sett_i4.png")-344px -149px;
+	width: 75px;
+	height: 45px;
 	z-index: 5;
 	opacity: 0;
 	cursor: pointer;
@@ -1799,10 +1771,10 @@
 .s9 .copy .bodyText .settTrack .s9n4
 {
 	position: relative;
-	left: 512px;
-	top: -342px;
-	background: url("../img/sett_i4.png")-512px -194px;
-	width: 44px;
+	left: 490px;
+	top: -376px;
+	background: url("../img/sett_i4.png")-455px -41px;
+	width: 75px;
 	height: 44px;
 	z-index: 5;	
 	opacity: 0;
